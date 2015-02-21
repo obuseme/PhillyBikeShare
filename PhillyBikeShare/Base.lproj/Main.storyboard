@@ -66,6 +66,9 @@
                                 <state key="normal" title="Continue without signing up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="PRy-OS-4cc" kind="show" id="c61-ct-1B3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,4 +134,7 @@
             <point key="canvasLocation" x="1424" y="78"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="no2-kY-5hI"/>
+    </inferredMetricsTieBreakers>
 </document>

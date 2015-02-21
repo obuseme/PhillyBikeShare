@@ -45,5 +45,4 @@
     NSLog(@"Error updating location %@", [error description]);
 }
 
-
 @end
