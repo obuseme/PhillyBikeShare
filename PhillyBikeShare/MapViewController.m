@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "MathController.h"
+#import "MapMarkerView.h"
 
 @interface MapViewController ()
 
@@ -20,10 +21,14 @@
 @property BOOL trackingRide;
 @property int seconds;
 @property float distance;
-@property (nonatomic, strong) NSMutableArray *locations;
-@property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, strong) GMSMutablePath *ridePath;
-@property (nonatomic, strong) GMSPolyline *ridePolyline;
+@property (nonatomic) NSMutableArray *locations;
+@property (nonatomic) NSTimer *timer;
+@property (nonatomic) GMSMutablePath *ridePath;
+@property (nonatomic) GMSPolyline *ridePolyline;
+
+//Map Markers
+@property (nonatomic, weak) IBOutlet MapMarkerView *mapMarkerView;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *mapMarkerViewConstraint;
 
 @end
 
@@ -37,13 +42,23 @@
     self.locationManager.distanceFilter = 5;
     self.locationManager.activityType = CLActivityTypeFitness;
     [self.locationManager requestAlwaysAuthorization];
-    [self.locationManager startUpdatingLocation];
+    //This code is nice, but will center map on San Fran
+//    [self.locationManager startUpdatingLocation];
     
     self.mapView.delegate = self;
     self.mapView.myLocationEnabled = YES;
     self.mapView.settings.myLocationButton = YES;
     
     self.centerOnUser = YES;
+    
+    //Artificially center camera on Philly for now
+    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1496943 zoom:13 bearing:0 viewingAngle:0]];
+    
+    //Just a fake coordinate for now
+    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(39.9543828, -75.1496943);
+    GMSMarker *marker = [GMSMarker markerWithPosition:position];
+    marker.title = @"Hello World";
+    marker.map = self.mapView;
 }
 
 #pragma mark - IBActions
@@ -73,7 +88,7 @@
         self.trackingRide = NO;
         [self.startStopRideButton setTitle:@"Start a Ride" forState:UIControlStateNormal];
         [self.ridePath removeAllCoordinates];
-        [self.mapView clear];
+        self.ridePolyline.map = nil;
     }
 }
 
@@ -96,7 +111,39 @@
 - (void)mapView:(GMSMapView *)mapView willMove:(BOOL)gesture
 {
     if (gesture)
+    {
         self.centerOnUser = NO;
+        [self hideMapMarkerView];
+    }
+}
+
+- (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
+{
+    UITapGestureRecognizer *tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissOverlay:)];
+    [self.mapMarkerView addGestureRecognizer:tapGestureRec];
+    [self showMapMarkerView];
+    return YES;
+}
+
+- (void)dismissOverlay:(id)gesture
+{
+    [self hideMapMarkerView];
+}
+
+- (void)showMapMarkerView
+{
+    self.mapMarkerViewConstraint.constant = 0;
+    [UIView animateWithDuration:0.1 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)hideMapMarkerView
+{
+    self.mapMarkerViewConstraint.constant = -165;
+    [UIView animateWithDuration:0.1 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 #pragma mark - Location Manager
@@ -122,6 +169,7 @@
                 
             }
             [self.ridePath addCoordinate:newLocation.coordinate];
+            self.ridePolyline.map = nil;
             self.ridePolyline = [GMSPolyline polylineWithPath:self.ridePath];
             self.ridePolyline.map = self.mapView;
 
