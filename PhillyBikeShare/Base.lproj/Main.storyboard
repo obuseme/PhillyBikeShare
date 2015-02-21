@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-148" y="64"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="IDv-O3-Ahq">
             <objects>
-                <viewController id="8hS-Li-RxN" sceneMemberID="viewController">
+                <viewController id="8hS-Li-RxN" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pl8-uy-XbD"/>
                         <viewControllerLayoutGuide type="bottom" id="mfl-tI-Qma"/>

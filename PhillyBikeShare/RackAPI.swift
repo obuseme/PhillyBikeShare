@@ -37,32 +37,3 @@ func urlForEndpoint(endpoint: RackEndpoint, inEnvironment environment: Environme
 {
     return environment.baseURL.URLByAppendingPathComponent(endpoint.path)
 }
-
-// Sample Usage //
-/*
-
-let allRacksURL = urlForEndpoint(RackEndpoint.All, inEnvironment: Environment.Local)
-
-let sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
-let urlSession = NSURLSession(configuration: sessionConfiguration)
-
-let task = urlSession.dataTaskWithURL(allRacksURL, completionHandler: {
-    (data: NSData!, response: NSURLResponse!, error:NSError!) in
-    if error != nil {
-        println("error: \(error.localizedDescription): \(error.userInfo)")
-    }
-    else if data != nil {
-        if let str = NSString(data: data, encoding: NSUTF8StringEncoding) {
-            var jsonError: NSError?
-            let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &jsonError)
-            let deserializedDictionary = jsonObject as Dictionary<String, AnyObject>
-            println(deserializedDictionary["data"]!)
-        }
-        else {
-            println("unable to convert data to text")
-        }
-    }
-})
-
-task.resume()
-*/
