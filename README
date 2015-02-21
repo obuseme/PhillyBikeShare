@@ -1,1 +1,37 @@
 iOS App for the Philly Bike Share
+
+Install mongodb via homebrew
+
+```
+brew install mongodb
+```
+
+Run mongodb
+
+```
+mongod --config /usr/local/etc/mongod.conf
+```
+
+Clone the API
+
+```
+cd <working directory>
+git clone https://bitbucket.org/dotsom/bikeshare-api.git
+```
+
+Start the API
+
+```
+cd bikeshare-api
+node server.js
+```
+
+Clone the iOS app
+
+```
+cd <working directory>
+git clone https://github.com/obuseme/PhillyBikeShare.git
+cd PhillyBikeShare
+pod install
+open PhillyBikeShare.xcworkspace
+```
