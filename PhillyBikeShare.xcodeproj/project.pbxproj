@@ -20,6 +20,7 @@
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		EE8294DBB97A4CBB9F7F36C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2924723BAC4180B304108E /* libPods.a */; };
+		F68051C91A98EE2500A0F10A /* login-splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F68051C81A98EE2500A0F10A /* login-splash.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		93999F0C1A98EC3500BBC1F1 /* Rack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rack.h; sourceTree = "<group>"; };
 		93999F0D1A98EC3500BBC1F1 /* Rack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rack.m; sourceTree = "<group>"; };
 		CC2924723BAC4180B304108E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68051C81A98EE2500A0F10A /* login-splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-splash.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				93999F0B1A98EBFC00BBC1F1 /* Models */,
+				F68051C71A98EE0400A0F10A /* Images */,
 				93999F041A98E87400BBC1F1 /* API Stuff */,
 				23F319221A98B1CF00B62401 /* AppDelegate.h */,
 				23F319231A98B1CF00B62401 /* AppDelegate.m */,
@@ -180,6 +183,14 @@
 				84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F68051C71A98EE0400A0F10A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F68051C81A98EE2500A0F10A /* login-splash.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68051C91A98EE2500A0F10A /* login-splash.jpg in Resources */,
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
 				23F319321A98B1CF00B62401 /* Images.xcassets in Resources */,
