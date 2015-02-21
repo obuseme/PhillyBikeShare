@@ -12,5 +12,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *numberOfBikesLabel;
 @property (nonatomic, weak) IBOutlet UILabel *numberOfRacksLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 
 @end

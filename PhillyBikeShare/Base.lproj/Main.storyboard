@@ -174,6 +174,12 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-nH-T1W">
+                                        <rect key="frame" x="17" y="83" width="566" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -185,13 +191,17 @@
                                     <constraint firstItem="mbR-Vc-gFa" firstAttribute="leading" secondItem="eWM-Kq-Wkj" secondAttribute="leading" constant="39" id="JUK-Zv-PFJ"/>
                                     <constraint firstItem="mbR-Vc-gFa" firstAttribute="centerX" secondItem="4EH-PV-83L" secondAttribute="centerX" id="c3x-Qx-kaG"/>
                                     <constraint firstItem="taM-s1-Jd0" firstAttribute="centerX" secondItem="tAJ-R7-1ux" secondAttribute="centerX" id="cBa-BH-lbe"/>
+                                    <constraint firstAttribute="trailing" secondItem="tnJ-nH-T1W" secondAttribute="trailing" constant="17" id="dXQ-kd-DLv"/>
                                     <constraint firstItem="tAJ-R7-1ux" firstAttribute="top" secondItem="eWM-Kq-Wkj" secondAttribute="top" constant="37" id="dnZ-zk-P4r"/>
                                     <constraint firstAttribute="bottom" secondItem="taM-s1-Jd0" secondAttribute="bottom" constant="17" id="eah-4r-kiF"/>
+                                    <constraint firstItem="tnJ-nH-T1W" firstAttribute="leading" secondItem="eWM-Kq-Wkj" secondAttribute="leading" constant="17" id="gig-w1-rFi"/>
                                     <constraint firstAttribute="trailing" secondItem="tAJ-R7-1ux" secondAttribute="trailing" constant="48" id="ovL-N1-ioR"/>
                                     <constraint firstItem="e3m-dg-c1e" firstAttribute="centerX" secondItem="mbR-Vc-gFa" secondAttribute="centerX" constant="1" id="qjw-q0-IDy"/>
+                                    <constraint firstItem="tnJ-nH-T1W" firstAttribute="top" secondItem="eWM-Kq-Wkj" secondAttribute="top" constant="83" id="xGN-jV-h2M"/>
                                     <constraint firstItem="tAJ-R7-1ux" firstAttribute="top" secondItem="Xji-Da-NP9" secondAttribute="bottom" constant="1" id="yqr-RR-kWp"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="nameLabel" destination="tnJ-nH-T1W" id="erV-Zj-9Cq"/>
                                     <outlet property="numberOfBikesLabel" destination="4EH-PV-83L" id="FZt-xA-N9f"/>
                                     <outlet property="numberOfRacksLabel" destination="Xji-Da-NP9" id="s3h-W3-nev"/>
                                 </connections>

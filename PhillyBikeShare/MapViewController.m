@@ -58,7 +58,7 @@
     self.centerOnUser = YES;
     
     //Artificially center camera on Philly for now
-    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1496943 zoom:12 bearing:0 viewingAngle:0]];
+    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1696943 zoom:13 bearing:0 viewingAngle:0]];
     
 }
 
@@ -87,7 +87,9 @@
     {
         CLLocationCoordinate2D position = CLLocationCoordinate2DMake([rack.lat doubleValue], [rack.lng doubleValue]);
         GMSMarker *marker = [GMSMarker markerWithPosition:position];
+        marker.icon = [UIImage imageNamed:@"Icon Stations"];
         marker.map = self.mapView;
+        marker.userData = rack;
     }
 }
 
@@ -118,7 +120,7 @@
          endRackId          : { type: String, required: true, trim: true },
          startTime          : { type: Date, required: true },
          endTime            : { type: Date, required: true },
-         distance           : { type: Number, required: true },
+         distance (miles)   : { type: Number, required: true },
          calories           : { type: Number, required: false }
          
          */
@@ -165,7 +167,7 @@
 {
     UITapGestureRecognizer *tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissOverlay:)];
     [self.mapMarkerView addGestureRecognizer:tapGestureRec];
-    [self showMapMarkerView];
+    [self showMapMarkerViewForRack:(Rack *)marker.userData];
     return YES;
 }
 
@@ -174,8 +176,12 @@
     [self hideMapMarkerView];
 }
 
-- (void)showMapMarkerView
+- (void)showMapMarkerViewForRack:(Rack *)rack
 {
+    self.mapMarkerView.nameLabel.text = rack.name;
+    self.mapMarkerView.numberOfBikesLabel.text = [NSString stringWithFormat:@"%d", [rack.availBikes intValue]];
+    int numberOfRackSpots = [rack.maxBikes intValue] - [rack.availBikes intValue];
+    self.mapMarkerView.numberOfRacksLabel.text = [NSString stringWithFormat:@"%d", numberOfRackSpots];
     self.mapMarkerViewConstraint.constant = 0;
     [UIView animateWithDuration:0.1 animations:^{
         [self.view layoutIfNeeded];
