@@ -12,6 +12,7 @@ Run mongodb
 mongod --config /usr/local/etc/mongod.conf
 ```
 
+You'll probably need to open a new Terminal window now
 Clone the API
 
 ```
@@ -23,6 +24,8 @@ Start the API
 
 ```
 cd bikeshare-api
+npm install
+mongoimport --db bikeshare --collection racks --type json --file locations.json --jsonArray
 node server.js
 ```
 
