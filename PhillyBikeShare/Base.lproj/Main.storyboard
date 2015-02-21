@@ -8,8 +8,7 @@
         <!--Master-->
         <scene sceneID="cUi-kZ-frf">
             <objects>
-                <navigationController title="Master" navigationBarHidden="YES" id="rS3-R9-Ivy" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
+                <navigationController title="Master" id="rS3-R9-Ivy" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -105,6 +104,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="iax-E9-QRW"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqG-6q-AH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,6 +220,7 @@
                             <constraint firstItem="Wr0-ek-Y3E" firstAttribute="top" secondItem="Kk4-mx-ZAJ" secondAttribute="top" id="mwI-KJ-cFv"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapMarkerView" destination="eWM-Kq-Wkj" id="OqD-q5-JPy"/>
                         <outlet property="mapMarkerViewConstraint" destination="Xwz-FU-KXL" id="Ft7-4w-Dzg"/>
@@ -311,6 +312,6 @@
         <image name="login-splash.jpg" width="620" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IqC-uL-1T8"/>
+        <segue reference="no2-kY-5hI"/>
     </inferredMetricsTieBreakers>
 </document>
