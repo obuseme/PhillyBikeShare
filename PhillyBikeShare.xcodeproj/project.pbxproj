@@ -36,7 +36,8 @@
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
 		93999F121A98FF3500BBC1F1 /* RackAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F111A98FF3500BBC1F1 /* RackAPIManager.swift */; };
 		EE8294DBB97A4CBB9F7F36C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2924723BAC4180B304108E /* libPods.a */; };
-		F68051C91A98EE2500A0F10A /* login-splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F68051C81A98EE2500A0F10A /* login-splash.jpg */; };
+		F68051CB1A99087200A0F10A /* Sign In_image.png in Resources */ = {isa = PBXBuildFile; fileRef = F68051CA1A99087200A0F10A /* Sign In_image.png */; };
+		F6D306AE1A9922DA0015AA77 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D306AD1A9922DA0015AA77 /* arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,8 @@
 		93999F0F1A98F06D00BBC1F1 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		93999F111A98FF3500BBC1F1 /* RackAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RackAPIManager.swift; sourceTree = "<group>"; };
 		CC2924723BAC4180B304108E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F68051C81A98EE2500A0F10A /* login-splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-splash.jpg"; sourceTree = "<group>"; };
+		F68051CA1A99087200A0F10A /* Sign In_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign In_image.png"; sourceTree = "<group>"; };
+		F6D306AD1A9922DA0015AA77 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,8 @@
 				23F3197C1A99274200B62401 /* Station Pop Up@2x.png */,
 				23F3197D1A99274200B62401 /* Station Pop Up.png */,
 				23F3197E1A99274200B62401 /* Station Pop Up@3x.png */,
+				F68051CA1A99087200A0F10A /* Sign In_image.png */,
+				F6D306AD1A9922DA0015AA77 /* arrow.png */,
 				23F319781A99222800B62401 /* logo-long.png */,
 				23F319791A99222800B62401 /* logo-long@2x.png */,
 				23F319681A991C0F00B62401 /* Icon Bikes.png */,
@@ -238,7 +242,6 @@
 				23F3196D1A991C0F00B62401 /* Destination Icons.png */,
 				23F3196E1A991C0F00B62401 /* Destination Icons@2x.png */,
 				23F3196F1A991C0F00B62401 /* Icon Stations.png */,
-				F68051C81A98EE2500A0F10A /* login-splash.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -331,8 +334,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
+				F68051CB1A99087200A0F10A /* Sign In_image.png in Resources */,
+				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
+				F6D306AE1A9922DA0015AA77 /* arrow.png in Resources */,
 				23F319761A991C0F00B62401 /* Destination Icons@2x.png in Resources */,
-				F68051C91A98EE2500A0F10A /* login-splash.jpg in Resources */,
 				23F3197A1A99222800B62401 /* logo-long.png in Resources */,
 				23F3197B1A99222800B62401 /* logo-long@2x.png in Resources */,
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,

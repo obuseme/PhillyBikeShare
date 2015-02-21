@@ -8,8 +8,12 @@
 
 #import "LoginViewController.h"
 #import "PhillyBikeShare-Swift.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface LoginViewController ()
+
+@property (nonatomic, weak) IBOutlet UIView *emailLabelContainerView;
+@property (nonatomic, weak) IBOutlet UIView *passwordLabelContainerView;
 
 @end
 
@@ -17,6 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.emailLabelContainerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.emailLabelContainerView.layer.borderWidth = 1.0f;
+    self.passwordLabelContainerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.passwordLabelContainerView.layer.borderWidth = 1.0f;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
