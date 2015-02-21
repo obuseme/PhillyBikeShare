@@ -7,12 +7,12 @@
 //
 
 #import "MapViewController.h"
-#import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController ()
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (nonatomic) CLLocationManager *locationManager;
+@property BOOL centerOnUser;
 
 @end
 
@@ -27,8 +27,27 @@
     [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
     
+    self.mapView.delegate = self;
     self.mapView.myLocationEnabled = YES;
     self.mapView.settings.myLocationButton = YES;
+    
+    self.centerOnUser = YES;
+    
+}
+
+#pragma mark - GMSMapViewDelegate methods
+
+- (BOOL)didTapMyLocationButtonForMapView:(GMSMapView *)mapView
+{
+    self.centerOnUser = YES;
+    //NO is for default behavior
+    return NO;
+}
+
+- (void)mapView:(GMSMapView *)mapView willMove:(BOOL)gesture
+{
+    if (gesture)
+        self.centerOnUser = NO;
 }
 
 #pragma mark - Location Manager
@@ -36,8 +55,10 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *location = locations[0];
-    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:15 bearing:0 viewingAngle:0]];
-    [self.locationManager stopUpdatingLocation];
+    if (self.centerOnUser)
+    {
+        [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:15 bearing:0 viewingAngle:0]];
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
