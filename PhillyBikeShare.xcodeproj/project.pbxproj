@@ -28,6 +28,9 @@
 		23F319771A991C0F00B62401 /* Icon Stations.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F3196F1A991C0F00B62401 /* Icon Stations.png */; };
 		23F3197A1A99222800B62401 /* logo-long.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F319781A99222800B62401 /* logo-long.png */; };
 		23F3197B1A99222800B62401 /* logo-long@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F319791A99222800B62401 /* logo-long@2x.png */; };
+		23F3197F1A99274200B62401 /* Station Pop Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F3197C1A99274200B62401 /* Station Pop Up@2x.png */; };
+		23F319801A99274200B62401 /* Station Pop Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F3197D1A99274200B62401 /* Station Pop Up.png */; };
+		23F319811A99274200B62401 /* Station Pop Up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F3197E1A99274200B62401 /* Station Pop Up@3x.png */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -77,6 +80,9 @@
 		23F3196F1A991C0F00B62401 /* Icon Stations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon Stations.png"; sourceTree = "<group>"; };
 		23F319781A99222800B62401 /* logo-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-long.png"; sourceTree = "<group>"; };
 		23F319791A99222800B62401 /* logo-long@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-long@2x.png"; sourceTree = "<group>"; };
+		23F3197C1A99274200B62401 /* Station Pop Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Station Pop Up@2x.png"; sourceTree = "<group>"; };
+		23F3197D1A99274200B62401 /* Station Pop Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Station Pop Up.png"; sourceTree = "<group>"; };
+		23F3197E1A99274200B62401 /* Station Pop Up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Station Pop Up@3x.png"; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -219,6 +225,9 @@
 		F68051C71A98EE0400A0F10A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				23F3197C1A99274200B62401 /* Station Pop Up@2x.png */,
+				23F3197D1A99274200B62401 /* Station Pop Up.png */,
+				23F3197E1A99274200B62401 /* Station Pop Up@3x.png */,
 				23F319781A99222800B62401 /* logo-long.png */,
 				23F319791A99222800B62401 /* logo-long@2x.png */,
 				23F319681A991C0F00B62401 /* Icon Bikes.png */,
@@ -327,11 +336,14 @@
 				23F3197A1A99222800B62401 /* logo-long.png in Resources */,
 				23F3197B1A99222800B62401 /* logo-long@2x.png in Resources */,
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
+				23F319811A99274200B62401 /* Station Pop Up@3x.png in Resources */,
 				23F319731A991C0F00B62401 /* Icon Rack.png in Resources */,
+				23F3197F1A99274200B62401 /* Station Pop Up@2x.png in Resources */,
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
 				23F319711A991C0F00B62401 /* Icon Bikes@2x.png in Resources */,
 				23F319771A991C0F00B62401 /* Icon Stations.png in Resources */,
 				23F319721A991C0F00B62401 /* Icon Rack@2x.png in Resources */,
+				23F319801A99274200B62401 /* Station Pop Up.png in Resources */,
 				23F319751A991C0F00B62401 /* Destination Icons.png in Resources */,
 				23F319741A991C0F00B62401 /* Icon Stations@2x.png in Resources */,
 				23F319321A98B1CF00B62401 /* Images.xcassets in Resources */,

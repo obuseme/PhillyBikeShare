@@ -34,6 +34,10 @@
 
 @property (nonatomic) NSArray *racks;
 
+@property (nonatomic, weak) IBOutlet UIButton *stationButton;
+@property (nonatomic, weak) IBOutlet UIButton *bikesButton;
+@property (nonatomic, weak) IBOutlet UIButton *racksButton;
+
 @end
 
 @implementation MapViewController
@@ -43,6 +47,9 @@
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-long"]];
 
+    [[self.stationButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+    [[self.racksButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+    [[self.bikesButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rackAPIComplete:) name:@"RacksAPIComplete" object:nil];
     
