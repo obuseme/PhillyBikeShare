@@ -26,6 +26,9 @@
     self.locationManager.distanceFilter = 5;
     [self.locationManager requestAlwaysAuthorization];
     [self.locationManager startUpdatingLocation];
+    
+    self.mapView.myLocationEnabled = YES;
+    self.mapView.settings.myLocationButton = YES;
 }
 
 #pragma mark - Location Manager
@@ -34,6 +37,7 @@
 {
     CLLocation *location = locations[0];
     [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:15 bearing:0 viewingAngle:0]];
+    [self.locationManager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
