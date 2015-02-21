@@ -26,6 +26,16 @@ func addObjectToCoreData(object: CoreDataMappable)
     if !managedContext.save(&error) {
         println("Could not save \(error), \(error?.userInfo)")
     }
+// Uncomment to see all the Racks in the console
+    /*
+    let fetchRequest = NSFetchRequest()
+    // Edit the entity name as appropriate.
+    let entity = NSEntityDescription.entityForName(object.coreDataEntityName, inManagedObjectContext: managedContext)
+    fetchRequest.entity = entity
+    var fetchError: NSError?
+    let results = managedContext.executeFetchRequest(fetchRequest, error: &fetchError)
+    println("\(results)")
+*/
 }
 
 struct Rack: CoreDataMappable {
@@ -37,7 +47,7 @@ struct Rack: CoreDataMappable {
     let availBikes: Int
 
     //! Decode from provided JSON dictionary.
-    func decode(json: [String : AnyObject]) -> Rack? {
+    static func decode(json: [String : AnyObject]) -> Rack? {
         if let rackId = json["_id"] as? String {
             if let lat = json["lat"] as? String {
                 if let lng = json["lng"] as? String {
