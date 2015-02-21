@@ -18,6 +18,7 @@
 		23F3194F1A98B55800B62401 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3194E1A98B55800B62401 /* MapViewController.m */; };
 		23F319521A98D9F900B62401 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F319511A98D9F900B62401 /* MathController.m */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
+		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		EE8294DBB97A4CBB9F7F36C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2924723BAC4180B304108E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
 		93999F061A98E88900BBC1F1 /* RackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RackAPI.swift; sourceTree = "<group>"; };
+		93999F0C1A98EC3500BBC1F1 /* Rack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rack.h; sourceTree = "<group>"; };
+		93999F0D1A98EC3500BBC1F1 /* Rack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rack.m; sourceTree = "<group>"; };
 		CC2924723BAC4180B304108E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,6 +102,7 @@
 		23F3191D1A98B1CF00B62401 /* PhillyBikeShare */ = {
 			isa = PBXGroup;
 			children = (
+				93999F0B1A98EBFC00BBC1F1 /* Models */,
 				93999F041A98E87400BBC1F1 /* API Stuff */,
 				23F319221A98B1CF00B62401 /* AppDelegate.h */,
 				23F319231A98B1CF00B62401 /* AppDelegate.m */,
@@ -158,6 +162,15 @@
 				93999F061A98E88900BBC1F1 /* RackAPI.swift */,
 			);
 			name = "API Stuff";
+			sourceTree = "<group>";
+		};
+		93999F0B1A98EBFC00BBC1F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93999F0C1A98EC3500BBC1F1 /* Rack.h */,
+				93999F0D1A98EC3500BBC1F1 /* Rack.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		DEC71DA659898734FAF2F7AA /* Pods */ = {
@@ -311,6 +324,7 @@
 			files = (
 				23F3194C1A98B30600B62401 /* LoginViewController.m in Sources */,
 				23F319241A98B1CF00B62401 /* AppDelegate.m in Sources */,
+				93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */,
 				23F3194F1A98B55800B62401 /* MapViewController.m in Sources */,
 				93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */,
 				23F319271A98B1CF00B62401 /* PhillyBikeShare.xcdatamodeld in Sources */,
