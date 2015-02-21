@@ -233,7 +233,6 @@
 				23F3196D1A991C0F00B62401 /* Destination Icons.png */,
 				23F3196E1A991C0F00B62401 /* Destination Icons@2x.png */,
 				23F3196F1A991C0F00B62401 /* Icon Stations.png */,
-				F68051C81A98EE2500A0F10A /* login-splash.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -331,7 +330,6 @@
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
 				F6D306AE1A9922DA0015AA77 /* arrow.png in Resources */,
 				23F319761A991C0F00B62401 /* Destination Icons@2x.png in Resources */,
-				F68051C91A98EE2500A0F10A /* login-splash.jpg in Resources */,
 				23F3197A1A99222800B62401 /* logo-long.png in Resources */,
 				23F3197B1A99222800B62401 /* logo-long@2x.png in Resources */,
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
