@@ -19,6 +19,7 @@
 		23F319521A98D9F900B62401 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F319511A98D9F900B62401 /* MathController.m */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
+		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
 		EE8294DBB97A4CBB9F7F36C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2924723BAC4180B304108E /* libPods.a */; };
 		F68051C91A98EE2500A0F10A /* login-splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F68051C81A98EE2500A0F10A /* login-splash.jpg */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		93999F061A98E88900BBC1F1 /* RackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RackAPI.swift; sourceTree = "<group>"; };
 		93999F0C1A98EC3500BBC1F1 /* Rack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rack.h; sourceTree = "<group>"; };
 		93999F0D1A98EC3500BBC1F1 /* Rack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rack.m; sourceTree = "<group>"; };
+		93999F0F1A98F06D00BBC1F1 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		CC2924723BAC4180B304108E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68051C81A98EE2500A0F10A /* login-splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login-splash.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				93999F061A98E88900BBC1F1 /* RackAPI.swift */,
+				93999F0F1A98F06D00BBC1F1 /* Structs.swift */,
 			);
 			name = "API Stuff";
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */,
 				23F3194C1A98B30600B62401 /* LoginViewController.m in Sources */,
 				23F319241A98B1CF00B62401 /* AppDelegate.m in Sources */,
 				93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */,
