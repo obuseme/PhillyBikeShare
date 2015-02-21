@@ -18,9 +18,7 @@ let currentEnvironment = Environment.Local
     func loadAllRacks() {
         let allRacksURL = urlForEndpoint(RackEndpoint.All, inEnvironment: currentEnvironment)
 
-//        if let allRacks = loadRequestForURL(allRacksURL) {
-//
-//        }
+        loadRequestForURL(allRacksURL)
     }
 
     func loadRequestForURL(url: NSURL) {
@@ -37,8 +35,16 @@ let currentEnvironment = Environment.Local
                     var jsonError: NSError?
                     let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &jsonError)
                     let deserializedDictionary = jsonObject as Dictionary<String, AnyObject>
-                    let dataArray = deserializedDictionary["data"] as [AnyObject]
-//                    return dataArray
+                    let dataArray = deserializedDictionary["data"] as [[String:AnyObject]]
+                    var rackArray: [Rack] = []
+
+                    for rawRack in dataArray {
+                        if let actualRack = Rack.decode(rawRack) {
+                            rackArray.append(actualRack)
+                            addObjectToCoreData(actualRack)
+                        }
+                    }
+                    NSNotificationCenter.defaultCenter().postNotificationName("RacksAPIComplete", object: nil)
                 }
                 else {
                     println("unable to convert data to text")
