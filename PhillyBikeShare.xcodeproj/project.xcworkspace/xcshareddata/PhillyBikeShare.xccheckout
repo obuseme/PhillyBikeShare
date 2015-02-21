@@ -14,11 +14,11 @@
 		<string>https://github.com/obuseme/PhillyBikeShare.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PhillyBikeShare/PhillyBikeShare.xcodeproj</string>
+	<string>PhillyBikeShare.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>88DA2A9222AB93EE18D8D243C77BFC5BAB0F050B</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/obuseme/PhillyBikeShare.git</string>
