@@ -33,6 +33,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-splash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rLZ-Jh-rNx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kA-XK-j2F">
                                 <rect key="frame" x="142" y="220" width="317" height="30"/>
                                 <constraints>
@@ -73,15 +76,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rLZ-Jh-rNx" firstAttribute="leading" secondItem="0Bn-oa-6kW" secondAttribute="leading" id="GgD-4c-tdD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4kA-XK-j2F" secondAttribute="trailing" constant="125" id="MSC-Xu-I8Y"/>
                             <constraint firstItem="Cqz-mn-Ru3" firstAttribute="top" secondItem="6eH-GQ-hYS" secondAttribute="bottom" constant="8" id="TEX-Ls-6bf"/>
+                            <constraint firstItem="mfl-tI-Qma" firstAttribute="top" secondItem="rLZ-Jh-rNx" secondAttribute="bottom" id="TF3-eZ-voR"/>
                             <constraint firstAttribute="centerX" secondItem="bme-iI-zUm" secondAttribute="centerX" constant="-0.5" id="W67-LN-bCk"/>
                             <constraint firstItem="4kA-XK-j2F" firstAttribute="leading" secondItem="0Bn-oa-6kW" secondAttribute="leadingMargin" constant="126" id="WIE-Ou-WQ5"/>
+                            <constraint firstAttribute="trailing" secondItem="rLZ-Jh-rNx" secondAttribute="trailing" id="br8-Pj-TnV"/>
                             <constraint firstAttribute="centerX" secondItem="6eH-GQ-hYS" secondAttribute="centerX" constant="-4.5" id="e6J-lH-9lN"/>
                             <constraint firstAttribute="centerY" secondItem="4kA-XK-j2F" secondAttribute="centerY" constant="65" id="eOS-kg-SRA"/>
                             <constraint firstItem="bme-iI-zUm" firstAttribute="top" secondItem="4kA-XK-j2F" secondAttribute="bottom" constant="11" id="fPt-Mv-6uO"/>
                             <constraint firstAttribute="centerX" secondItem="boL-fo-TXg" secondAttribute="centerX" id="gwL-mD-25r"/>
                             <constraint firstItem="4kA-XK-j2F" firstAttribute="width" secondItem="bme-iI-zUm" secondAttribute="width" id="kLl-WD-3lM"/>
+                            <constraint firstItem="rLZ-Jh-rNx" firstAttribute="top" secondItem="0Bn-oa-6kW" secondAttribute="top" id="rJy-CE-5en"/>
                             <constraint firstItem="boL-fo-TXg" firstAttribute="top" secondItem="bme-iI-zUm" secondAttribute="bottom" constant="8" id="rlv-TO-Gji"/>
                             <constraint firstAttribute="centerX" secondItem="Cqz-mn-Ru3" secondAttribute="centerX" id="s4W-KV-FNn"/>
                             <constraint firstItem="6eH-GQ-hYS" firstAttribute="top" secondItem="boL-fo-TXg" secondAttribute="bottom" constant="8" id="scQ-7r-ZOK"/>
@@ -146,6 +153,9 @@
             <point key="canvasLocation" x="1424" y="78"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login-splash.jpg" width="620" height="400"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="no2-kY-5hI"/>
     </inferredMetricsTieBreakers>
