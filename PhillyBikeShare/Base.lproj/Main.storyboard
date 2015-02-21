@@ -37,15 +37,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kA-XK-j2F">
-                                <rect key="frame" x="142" y="220" width="317" height="30"/>
+                                <rect key="frame" x="161" y="220" width="280" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="317" id="65t-3b-aZQ"/>
+                                    <constraint firstAttribute="width" constant="280" id="65t-3b-aZQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bme-iI-zUm">
-                                <rect key="frame" x="142" y="261" width="317" height="30"/>
+                                <rect key="frame" x="161" y="261" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -63,6 +63,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Yjb-2d-BXG" kind="show" id="ZtG-5Z-wyN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqz-mn-Ru3">
                                 <rect key="frame" x="204" y="375" width="192" height="30"/>
@@ -218,11 +221,86 @@
             </objects>
             <point key="canvasLocation" x="1424" y="78"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="he7-hV-94q">
+            <objects>
+                <viewController id="Yjb-2d-BXG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6VU-HE-wNF"/>
+                        <viewControllerLayoutGuide type="bottom" id="vru-oY-PRw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k6U-5C-eNi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUe-8G-zWc">
+                                <rect key="frame" x="160" y="143" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9s-Ns-X5M">
+                                <rect key="frame" x="160" y="181" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iri-Bf-a9O">
+                                <rect key="frame" x="160" y="67" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Spe-zA-3LP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PYL-F6-Bjk">
+                                <rect key="frame" x="160" y="105" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfT-n5-B5s">
+                                <rect key="frame" x="160" y="219" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyw-ap-Wfm">
+                                <rect key="frame" x="273" y="277" width="55" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PRy-OS-4cc" kind="show" id="IqC-uL-1T8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iri-Bf-a9O" firstAttribute="top" secondItem="k6U-5C-eNi" secondAttribute="topMargin" constant="67" id="0DD-8r-rDp"/>
+                            <constraint firstItem="CUe-8G-zWc" firstAttribute="width" secondItem="e9s-Ns-X5M" secondAttribute="width" id="1CT-Tv-qlh"/>
+                            <constraint firstItem="pfT-n5-B5s" firstAttribute="centerX" secondItem="e9s-Ns-X5M" secondAttribute="centerX" id="4CR-q9-ZFS"/>
+                            <constraint firstItem="e9s-Ns-X5M" firstAttribute="top" secondItem="CUe-8G-zWc" secondAttribute="bottom" constant="8" id="7sI-tl-PJ8"/>
+                            <constraint firstItem="CUe-8G-zWc" firstAttribute="centerX" secondItem="e9s-Ns-X5M" secondAttribute="centerX" id="DaR-rd-m7l"/>
+                            <constraint firstItem="CUe-8G-zWc" firstAttribute="top" secondItem="PYL-F6-Bjk" secondAttribute="bottom" constant="8" id="FvB-yp-6uH"/>
+                            <constraint firstItem="iri-Bf-a9O" firstAttribute="width" secondItem="PYL-F6-Bjk" secondAttribute="width" id="GFg-J5-09F"/>
+                            <constraint firstItem="CUe-8G-zWc" firstAttribute="width" secondItem="PYL-F6-Bjk" secondAttribute="width" id="JkI-qY-tYq"/>
+                            <constraint firstItem="PYL-F6-Bjk" firstAttribute="top" secondItem="iri-Bf-a9O" secondAttribute="bottom" constant="8" id="NT5-GO-GbR"/>
+                            <constraint firstAttribute="centerX" secondItem="iri-Bf-a9O" secondAttribute="centerX" id="P9Y-5f-hBR"/>
+                            <constraint firstItem="oyw-ap-Wfm" firstAttribute="top" secondItem="pfT-n5-B5s" secondAttribute="bottom" constant="28" id="gZI-CO-fTj"/>
+                            <constraint firstItem="pfT-n5-B5s" firstAttribute="top" secondItem="e9s-Ns-X5M" secondAttribute="bottom" constant="8" id="iL9-cM-bL0"/>
+                            <constraint firstItem="iri-Bf-a9O" firstAttribute="centerX" secondItem="PYL-F6-Bjk" secondAttribute="centerX" id="qtE-BQ-eS1"/>
+                            <constraint firstItem="oyw-ap-Wfm" firstAttribute="centerX" secondItem="pfT-n5-B5s" secondAttribute="centerX" constant="0.5" id="uhE-cG-7sB"/>
+                            <constraint firstItem="CUe-8G-zWc" firstAttribute="centerX" secondItem="PYL-F6-Bjk" secondAttribute="centerX" id="xHJ-dx-vOs"/>
+                            <constraint firstItem="pfT-n5-B5s" firstAttribute="width" secondItem="e9s-Ns-X5M" secondAttribute="width" id="yNR-rG-N6s"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIe-Mn-PZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="752"/>
+        </scene>
     </scenes>
     <resources>
         <image name="login-splash.jpg" width="620" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c61-ct-1B3"/>
+        <segue reference="IqC-uL-1T8"/>
     </inferredMetricsTieBreakers>
 </document>
