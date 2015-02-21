@@ -15,6 +15,7 @@
 		23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F319331A98B1CF00B62401 /* LaunchScreen.xib */; };
 		23F319411A98B1CF00B62401 /* PhillyBikeShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F319401A98B1CF00B62401 /* PhillyBikeShareTests.m */; };
 		23F3194C1A98B30600B62401 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3194B1A98B30600B62401 /* LoginViewController.m */; };
+		23F3194F1A98B55800B62401 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3194E1A98B55800B62401 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		23F319401A98B1CF00B62401 /* PhillyBikeShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhillyBikeShareTests.m; sourceTree = "<group>"; };
 		23F3194A1A98B30600B62401 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		23F3194B1A98B30600B62401 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		23F3194D1A98B55800B62401 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		23F3194E1A98B55800B62401 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				23F319231A98B1CF00B62401 /* AppDelegate.m */,
 				23F3194A1A98B30600B62401 /* LoginViewController.h */,
 				23F3194B1A98B30600B62401 /* LoginViewController.m */,
+				23F3194D1A98B55800B62401 /* MapViewController.h */,
+				23F3194E1A98B55800B62401 /* MapViewController.m */,
 				23F3192E1A98B1CF00B62401 /* Main.storyboard */,
 				23F319311A98B1CF00B62401 /* Images.xcassets */,
 				23F319331A98B1CF00B62401 /* LaunchScreen.xib */,
@@ -224,6 +229,7 @@
 			files = (
 				23F3194C1A98B30600B62401 /* LoginViewController.m in Sources */,
 				23F319241A98B1CF00B62401 /* AppDelegate.m in Sources */,
+				23F3194F1A98B55800B62401 /* MapViewController.m in Sources */,
 				23F319271A98B1CF00B62401 /* PhillyBikeShare.xcdatamodeld in Sources */,
 				23F319211A98B1CF00B62401 /* main.m in Sources */,
 			);
