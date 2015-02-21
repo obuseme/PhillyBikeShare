@@ -1,0 +1,10 @@
+PODS:
+  - Google-Maps-iOS-SDK (1.9.2)
+
+DEPENDENCIES:
+  - Google-Maps-iOS-SDK
+
+SPEC CHECKSUMS:
+  Google-Maps-iOS-SDK: 3b89f4c151f8fc3ddb0e70dece9bcab33dbec2ea
+
+COCOAPODS: 0.32.1
