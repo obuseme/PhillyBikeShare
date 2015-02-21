@@ -9,6 +9,8 @@
 #import "MapViewController.h"
 #import "MathController.h"
 #import "MapMarkerView.h"
+#import "Rack.h"
+#import "AppDelegate.h"
 
 @interface MapViewController ()
 
@@ -30,12 +32,16 @@
 @property (nonatomic, weak) IBOutlet MapMarkerView *mapMarkerView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *mapMarkerViewConstraint;
 
+@property (nonatomic) NSArray *racks;
+
 @end
 
 @implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rackAPIComplete:) name:@"RacksAPIComplete" object:nil];
+    
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -52,13 +58,37 @@
     self.centerOnUser = YES;
     
     //Artificially center camera on Philly for now
-    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1496943 zoom:13 bearing:0 viewingAngle:0]];
+    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1496943 zoom:12 bearing:0 viewingAngle:0]];
     
-    //Just a fake coordinate for now
-    CLLocationCoordinate2D position = CLLocationCoordinate2DMake(39.9543828, -75.1496943);
-    GMSMarker *marker = [GMSMarker markerWithPosition:position];
-    marker.title = @"Hello World";
-    marker.map = self.mapView;
+}
+
+- (void)rackAPIComplete:(id)notification
+{
+    [self retrieveRacks];
+}
+
+- (void)retrieveRacks
+{
+    NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Rack"];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Rack" inManagedObjectContext:context];
+    fetchRequest.entity = entityDescription;
+    NSError *error = nil;
+    NSArray *rackFromCoreData = [context executeFetchRequest:fetchRequest error:&error];
+    self.racks = rackFromCoreData;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self addMarkersFromRacks];
+    });
+}
+
+- (void)addMarkersFromRacks
+{
+    for (Rack *rack in self.racks)
+    {
+        CLLocationCoordinate2D position = CLLocationCoordinate2DMake([rack.lat doubleValue], [rack.lng doubleValue]);
+        GMSMarker *marker = [GMSMarker markerWithPosition:position];
+        marker.map = self.mapView;
+    }
 }
 
 #pragma mark - IBActions
@@ -79,6 +109,20 @@
     }
     else
     {
+        /*
+         Create ride post request
+         
+         userId             : { type: String, required: true, trim: true },
+         bikeId             : { type: String, required: false, trim: true },
+         startRackId        : { type: String, required: true, trim: true },
+         endRackId          : { type: String, required: true, trim: true },
+         startTime          : { type: Date, required: true },
+         endTime            : { type: Date, required: true },
+         distance           : { type: Number, required: true },
+         calories           : { type: Number, required: false }
+         
+         */
+        
         NSString *time = [NSString stringWithFormat:@"Time: %@",  [MathController stringifySecondCount:self.seconds usingLongFormat:NO]];
         NSString *distance = [NSString stringWithFormat:@"Distance: %@", [MathController stringifyDistance:self.distance]];
         NSString *pace = [NSString stringWithFormat:@"Pace: %@",  [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];

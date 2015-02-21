@@ -27,15 +27,13 @@ func addObjectToCoreData(object: CoreDataMappable)
         println("Could not save \(error), \(error?.userInfo)")
     }
 // Uncomment to see all the Racks in the console
-    /*
-    let fetchRequest = NSFetchRequest()
-    // Edit the entity name as appropriate.
-    let entity = NSEntityDescription.entityForName(object.coreDataEntityName, inManagedObjectContext: managedContext)
-    fetchRequest.entity = entity
-    var fetchError: NSError?
-    let results = managedContext.executeFetchRequest(fetchRequest, error: &fetchError)
-    println("\(results)")
-*/
+//    let fetchRequest = NSFetchRequest()
+//    // Edit the entity name as appropriate.
+//    let entity = NSEntityDescription.entityForName(object.coreDataEntityName, inManagedObjectContext: managedContext)
+//    fetchRequest.entity = entity
+//    var fetchError: NSError?
+//    let results = managedContext.executeFetchRequest(fetchRequest, error: &fetchError)
+//    println("\(results)")
 }
 
 struct Rack: CoreDataMappable {

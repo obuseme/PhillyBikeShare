@@ -36,12 +36,15 @@ let currentEnvironment = Environment.Local
                     let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &jsonError)
                     let deserializedDictionary = jsonObject as Dictionary<String, AnyObject>
                     let dataArray = deserializedDictionary["data"] as [[String:AnyObject]]
+                    var rackArray: [Rack] = []
 
                     for rawRack in dataArray {
                         if let actualRack = Rack.decode(rawRack) {
+                            rackArray.append(actualRack)
                             addObjectToCoreData(actualRack)
                         }
                     }
+                    NSNotificationCenter.defaultCenter().postNotificationName("RacksAPIComplete", object: nil)
                 }
                 else {
                     println("unable to convert data to text")
