@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7C2AD5E8-5F72-4216-B169-43BFBA5001D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PhillyBikeShare</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>88DA2A9222AB93EE18D8D243C77BFC5BAB0F050B</key>
+		<string>https://github.com/obuseme/PhillyBikeShare.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PhillyBikeShare/PhillyBikeShare.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>88DA2A9222AB93EE18D8D243C77BFC5BAB0F050B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/obuseme/PhillyBikeShare.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>88DA2A9222AB93EE18D8D243C77BFC5BAB0F050B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>88DA2A9222AB93EE18D8D243C77BFC5BAB0F050B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhillyBikeShare</string>
+		</dict>
+	</array>
+</dict>
+</plist>
