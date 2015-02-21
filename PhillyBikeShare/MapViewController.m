@@ -7,8 +7,11 @@
 //
 
 #import "MapViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController ()
+
+@property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 
 @end
 

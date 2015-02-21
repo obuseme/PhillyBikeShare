@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="672" y="65"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="S2b-SM-MFK">
             <objects>
-                <viewController id="PRy-OS-4cc" sceneMemberID="viewController">
+                <viewController id="PRy-OS-4cc" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ARV-eh-UjA"/>
                         <viewControllerLayoutGuide type="bottom" id="WEf-lQ-gJn"/>
@@ -108,8 +108,23 @@
                     <view key="view" contentMode="scaleToFill" id="Kk4-mx-ZAJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wr0-ek-Y3E" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wr0-ek-Y3E" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="29t-tV-etm"/>
+                            <constraint firstAttribute="bottom" secondItem="Wr0-ek-Y3E" secondAttribute="bottom" id="2I7-Gf-qcA"/>
+                            <constraint firstAttribute="trailing" secondItem="Wr0-ek-Y3E" secondAttribute="trailing" id="Jhj-Or-Mbc"/>
+                            <constraint firstItem="Wr0-ek-Y3E" firstAttribute="top" secondItem="Kk4-mx-ZAJ" secondAttribute="top" id="mwI-KJ-cFv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Wr0-ek-Y3E" id="Twj-c8-fGV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCg-qH-4sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
