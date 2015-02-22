@@ -16,8 +16,8 @@ enum Environment {
         switch self {
         case .Local:
             // NOTE: NSURL has an optional initializer, but we're hardcoding - we'll force unwrap.
-//            return NSURL(string: "http://107.170.65.106:9999")!
-            return NSURL(string: "http://localhost:9999")!
+            return NSURL(string: "http://107.170.65.106:9999")!
+            //return NSURL(string: "http://localhost:9999")!
         }
     }
 }

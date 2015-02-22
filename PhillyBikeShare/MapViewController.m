@@ -46,7 +46,6 @@
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-long"]];
-
     [[self.stationButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
     [[self.racksButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
     [[self.bikesButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
@@ -214,7 +213,7 @@
     CLLocation *location = locations[0];
     if (self.centerOnUser)
     {
-        [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:15 bearing:0 viewingAngle:0]];
+        [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:13 bearing:0 viewingAngle:0]];
     }
     if (self.trackingRide)
     {
