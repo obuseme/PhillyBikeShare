@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeaderboardTableViewController : UITableViewController
+@interface LeaderboardTableViewController : UIViewController
 
 @end
