@@ -3,7 +3,7 @@
 
 The data powering this app is a Rest API built on node.js and mongodb.  It's code (also written during Philly Codefest 2015) is hosted on BitBucket at https://bitbucket.org/dotsom/bikeshare-api
 
-<img src="readmescreenshot.png"/><img src="team.JPG"/>
+<img src="https://github.com/obuseme/PhillyBikeShare/blob/master/readmescreenshot.png"><img src="https://github.com/obuseme/PhillyBikeShare/blob/master/team.JPG">
 
 ##iOS Local Setup Instructions
 
