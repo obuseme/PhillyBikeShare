@@ -1350,10 +1350,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaderboard.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kbu-Va-RRq">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="69" width="600" height="536"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaderboard 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="gSO-GW-Ylf">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="69" width="600" height="536"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ih3-wd-5l5">
                                 <rect key="frame" x="0.0" y="72" width="301" height="85"/>
@@ -1383,15 +1383,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dM5-fo-tia" secondAttribute="trailing" id="0wr-6S-QER"/>
-                            <constraint firstItem="Kbu-Va-RRq" firstAttribute="top" secondItem="QWf-Nd-Idh" secondAttribute="bottom" id="5ug-QC-Hq4"/>
+                            <constraint firstItem="Kbu-Va-RRq" firstAttribute="top" secondItem="QWf-Nd-Idh" secondAttribute="bottom" constant="5" id="5ug-QC-Hq4"/>
                             <constraint firstItem="dM5-fo-tia" firstAttribute="leading" secondItem="Ih3-wd-5l5" secondAttribute="trailing" constant="-1" id="BqF-Xd-RtV"/>
                             <constraint firstItem="gSO-GW-Ylf" firstAttribute="leading" secondItem="R72-nZ-ge3" secondAttribute="leading" id="Co1-fw-vL6"/>
                             <constraint firstItem="Kbu-Va-RRq" firstAttribute="leading" secondItem="R72-nZ-ge3" secondAttribute="leading" id="IkP-at-RVd"/>
-                            <constraint firstAttribute="bottom" secondItem="Kbu-Va-RRq" secondAttribute="bottom" id="KuT-lC-lq9"/>
+                            <constraint firstAttribute="bottom" secondItem="Kbu-Va-RRq" secondAttribute="bottom" constant="-5" id="KuT-lC-lq9"/>
                             <constraint firstItem="dM5-fo-tia" firstAttribute="top" secondItem="QWf-Nd-Idh" secondAttribute="bottom" constant="8" id="Oe9-RR-VGa"/>
                             <constraint firstAttribute="trailing" secondItem="Kbu-Va-RRq" secondAttribute="trailing" id="U3r-OO-m26"/>
-                            <constraint firstItem="gSO-GW-Ylf" firstAttribute="top" secondItem="QWf-Nd-Idh" secondAttribute="bottom" id="dxn-Ul-VUm"/>
-                            <constraint firstItem="tS6-kw-RDc" firstAttribute="top" secondItem="gSO-GW-Ylf" secondAttribute="bottom" id="fRW-lu-bKW"/>
+                            <constraint firstItem="gSO-GW-Ylf" firstAttribute="top" secondItem="QWf-Nd-Idh" secondAttribute="bottom" constant="5" id="dxn-Ul-VUm"/>
+                            <constraint firstItem="tS6-kw-RDc" firstAttribute="top" secondItem="gSO-GW-Ylf" secondAttribute="bottom" constant="-5" id="fRW-lu-bKW"/>
                             <constraint firstItem="Ih3-wd-5l5" firstAttribute="top" secondItem="QWf-Nd-Idh" secondAttribute="bottom" constant="8" id="lgg-xL-Ltp"/>
                             <constraint firstItem="Ih3-wd-5l5" firstAttribute="leading" secondItem="R72-nZ-ge3" secondAttribute="leading" id="m9D-g2-LFc"/>
                             <constraint firstItem="Ih3-wd-5l5" firstAttribute="width" secondItem="dM5-fo-tia" secondAttribute="width" id="tnf-SE-t0G"/>
