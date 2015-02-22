@@ -50,6 +50,7 @@
 		4103F4A11A9A071A00D679C9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4103F4A01A9A071A00D679C9 /* HealthKit.framework */; };
 		4103F4A51A9A07A100D679C9 /* AccountSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4A41A9A07A100D679C9 /* AccountSettingsTableViewController.m */; };
 		4103F4A81A9A10F100D679C9 /* MyStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4A71A9A10F100D679C9 /* MyStatsViewController.m */; };
+		4103F4AB1A9A174300D679C9 /* LeaderboardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4AA1A9A174300D679C9 /* LeaderboardTableViewController.m */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -129,6 +130,8 @@
 		4103F4A41A9A07A100D679C9 /* AccountSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsTableViewController.m; sourceTree = "<group>"; };
 		4103F4A61A9A10F100D679C9 /* MyStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyStatsViewController.h; path = ../MyStatsViewController.h; sourceTree = "<group>"; };
 		4103F4A71A9A10F100D679C9 /* MyStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyStatsViewController.m; path = ../MyStatsViewController.m; sourceTree = "<group>"; };
+		4103F4A91A9A174300D679C9 /* LeaderboardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardTableViewController.h; sourceTree = "<group>"; };
+		4103F4AA1A9A174300D679C9 /* LeaderboardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardTableViewController.m; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				23F3199B1A997BBF00B62401 /* Constants.h */,
 				4103F48D1A998AAF00D679C9 /* MenuTableViewController.h */,
 				4103F48E1A998AAF00D679C9 /* MenuTableViewController.m */,
+				4103F4A91A9A174300D679C9 /* LeaderboardTableViewController.h */,
+				4103F4AA1A9A174300D679C9 /* LeaderboardTableViewController.m */,
 			);
 			path = PhillyBikeShare;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				23F319271A98B1CF00B62401 /* PhillyBikeShare.xcdatamodeld in Sources */,
 				23F319571A98FB5600B62401 /* MapMarkerView.m in Sources */,
 				23F319211A98B1CF00B62401 /* main.m in Sources */,
+				4103F4AB1A9A174300D679C9 /* LeaderboardTableViewController.m in Sources */,
 				4103F48F1A998AAF00D679C9 /* MenuTableViewController.m in Sources */,
 				23F319521A98D9F900B62401 /* MathController.m in Sources */,
 			);
