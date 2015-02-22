@@ -805,6 +805,272 @@
             </objects>
             <point key="canvasLocation" x="3127" y="1015"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xs1-Tn-lXW">
+            <objects>
+                <navigationController id="Cpb-iG-g7A" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Bn-6p-OLq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wx3-kn-GFt" kind="relationship" relationship="rootViewController" id="Qui-qV-MFe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAQ-f2-Emw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2363" y="1803"/>
+        </scene>
+        <!--My Stats-->
+        <scene sceneID="ahe-K6-nZq">
+            <objects>
+                <tableViewController id="Wx3-kn-GFt" customClass="MyStatsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="37" sectionHeaderHeight="22" sectionFooterHeight="22" id="vpg-zB-8Hx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="W6K-d4-PYT">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qim-va-qiE">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qim-va-qiE" id="e9H-3T-wY5">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Distance Cycled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWP-TK-q3w">
+                                                    <rect key="frame" x="18" y="9" width="165.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.5 miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QY3-u6-Iap">
+                                                    <rect key="frame" x="505.5" y="8" width="78" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dWP-TK-q3w" firstAttribute="leading" secondItem="e9H-3T-wY5" secondAttribute="leading" constant="18" id="ZUD-aJ-WGM"/>
+                                                <constraint firstAttribute="trailing" secondItem="QY3-u6-Iap" secondAttribute="trailing" constant="16.5" id="dcV-Tn-Ovt"/>
+                                                <constraint firstAttribute="centerY" secondItem="dWP-TK-q3w" secondAttribute="centerY" constant="-2.25" id="mzy-qx-1qC"/>
+                                                <constraint firstAttribute="centerY" secondItem="QY3-u6-Iap" secondAttribute="centerY" constant="-0.75" id="n1y-gw-DfC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9ro-0v-ENX">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ro-0v-ENX" id="ZAY-EG-u6u">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Rides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8u-Ph-iCh">
+                                                    <rect key="frame" x="18" y="9" width="86" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 rides" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Len-fc-4PN">
+                                                    <rect key="frame" x="525" y="8" width="58" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Len-fc-4PN" secondAttribute="trailing" constant="16.5" id="HlS-WT-pye"/>
+                                                <constraint firstAttribute="centerY" secondItem="Len-fc-4PN" secondAttribute="centerY" constant="-0.75" id="HtI-tE-38U"/>
+                                                <constraint firstItem="v8u-Ph-iCh" firstAttribute="leading" secondItem="ZAY-EG-u6u" secondAttribute="leading" constant="18" id="ezd-hj-MFp"/>
+                                                <constraint firstAttribute="centerY" secondItem="v8u-Ph-iCh" secondAttribute="centerY" constant="-2.25" id="h7y-Sv-jhc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qq3-0L-oOL">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qq3-0L-oOL" id="T5V-0g-74p">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Different Bikes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0D-QJ-SIo">
+                                                    <rect key="frame" x="18" y="9" width="158.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 bikes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nm-7D-tQL">
+                                                    <rect key="frame" x="528" y="8" width="55" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="H0D-QJ-SIo" firstAttribute="leading" secondItem="T5V-0g-74p" secondAttribute="leading" constant="18" id="Xl3-BI-hfi"/>
+                                                <constraint firstAttribute="centerY" secondItem="2nm-7D-tQL" secondAttribute="centerY" constant="-0.75" id="dxd-fz-j82"/>
+                                                <constraint firstAttribute="trailing" secondItem="2nm-7D-tQL" secondAttribute="trailing" constant="16.5" id="liT-rK-mwV"/>
+                                                <constraint firstAttribute="centerY" secondItem="H0D-QJ-SIo" secondAttribute="centerY" constant="-2" id="yQd-Wy-rFb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XDX-YT-yHY">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XDX-YT-yHY" id="dXM-hA-IRY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Money Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlI-at-Oxw">
+                                                    <rect key="frame" x="18" y="9" width="147.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFy-N3-jZN">
+                                                    <rect key="frame" x="520" y="8" width="63.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="bFy-N3-jZN" secondAttribute="centerY" constant="-0.75" id="GUx-xa-9JX"/>
+                                                <constraint firstAttribute="trailing" secondItem="bFy-N3-jZN" secondAttribute="trailing" constant="16.5" id="ipV-Gy-Fcd"/>
+                                                <constraint firstAttribute="centerY" secondItem="nlI-at-Oxw" secondAttribute="centerY" constant="-2" id="kd6-Bm-qCC"/>
+                                                <constraint firstItem="nlI-at-Oxw" firstAttribute="leading" secondItem="dXM-hA-IRY" secondAttribute="leading" constant="18" id="u2E-o6-lw5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3uh-R2-vgf">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3uh-R2-vgf" id="4Ag-sO-Xwt">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Joined" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d2-vb-4sn">
+                                                    <rect key="frame" x="18" y="9" width="92" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 5, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CJ-tO-oqr">
+                                                    <rect key="frame" x="477" y="8" width="106" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="2CJ-tO-oqr" secondAttribute="trailing" constant="16.5" id="854-6E-K6T"/>
+                                                <constraint firstItem="5d2-vb-4sn" firstAttribute="leading" secondItem="4Ag-sO-Xwt" secondAttribute="leading" constant="18" id="HTG-xq-MVH"/>
+                                                <constraint firstAttribute="centerY" secondItem="2CJ-tO-oqr" secondAttribute="centerY" constant="-0.75" id="MgE-bk-IcJ"/>
+                                                <constraint firstAttribute="centerY" secondItem="5d2-vb-4sn" secondAttribute="centerY" constant="-2" id="vpd-gW-svE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tvi-Ui-lvH">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tvi-Ui-lvH" id="cCx-ng-oZf">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emissions Saved" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8t-P8-Mi5">
+                                                    <rect key="frame" x="18" y="9" width="127" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 lbs/CO2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-MP-YOl">
+                                                    <rect key="frame" x="510" y="8" width="73.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="lbk-MP-YOl" secondAttribute="centerY" constant="-0.75" id="SWc-0d-XDb"/>
+                                                <constraint firstAttribute="trailing" secondItem="lbk-MP-YOl" secondAttribute="trailing" constant="16.5" id="UvS-ds-bU8"/>
+                                                <constraint firstItem="V8t-P8-Mi5" firstAttribute="leading" secondItem="cCx-ng-oZf" secondAttribute="leading" constant="18" id="VUt-uS-3OV"/>
+                                                <constraint firstAttribute="centerY" secondItem="V8t-P8-Mi5" secondAttribute="centerY" constant="-2" id="gGs-ds-VNT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JeZ-lK-pRY">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JeZ-lK-pRY" id="T9b-8W-aME">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burned" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scE-uf-jnG">
+                                                    <rect key="frame" x="18" y="9" width="121.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000 calories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJJ-9S-1VM">
+                                                    <rect key="frame" x="478" y="8" width="105" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="scE-uf-jnG" secondAttribute="centerY" constant="-2" id="Cqb-gr-Siz"/>
+                                                <constraint firstAttribute="centerY" secondItem="eJJ-9S-1VM" secondAttribute="centerY" constant="-0.75" id="MBF-Mg-LAg"/>
+                                                <constraint firstAttribute="trailing" secondItem="eJJ-9S-1VM" secondAttribute="trailing" constant="16.5" id="OuB-L9-Go5"/>
+                                                <constraint firstItem="scE-uf-jnG" firstAttribute="leading" secondItem="T9b-8W-aME" secondAttribute="leading" constant="18" id="hwm-sR-trm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Pe8-tC-TSv">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pe8-tC-TSv" id="uHi-is-T7K">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Trip Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZF-wt-if2">
+                                                    <rect key="frame" x="18" y="9" width="157" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.8 miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeL-kB-6Pl">
+                                                    <rect key="frame" x="513" y="8" width="70" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="QeL-kB-6Pl" secondAttribute="centerY" constant="-0.75" id="2gU-ZR-Wiq"/>
+                                                <constraint firstItem="8ZF-wt-if2" firstAttribute="leading" secondItem="uHi-is-T7K" secondAttribute="leading" constant="18" id="6xM-NK-fno"/>
+                                                <constraint firstAttribute="centerY" secondItem="8ZF-wt-if2" secondAttribute="centerY" constant="-2" id="NIC-NQ-KGz"/>
+                                                <constraint firstAttribute="trailing" secondItem="QeL-kB-6Pl" secondAttribute="trailing" constant="16.5" id="Nxr-fY-paB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Wx3-kn-GFt" id="oVD-Pr-iI7"/>
+                            <outlet property="delegate" destination="Wx3-kn-GFt" id="zYD-Fv-SSj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Stats" id="MVs-fC-Jcu">
+                        <barButtonItem key="leftBarButtonItem" id="ZvI-gq-3t9">
+                            <connections>
+                                <segue destination="erl-S8-4yp" kind="unwind" unwindAction="unwindToMenuViewController:" id="PVN-IS-8Qd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="averageTripLength" destination="QeL-kB-6Pl" id="Nnl-tz-f84"/>
+                        <outlet property="caloriesBurned" destination="eJJ-9S-1VM" id="tQI-jK-YFO"/>
+                        <outlet property="dateJoined" destination="2CJ-tO-oqr" id="c7B-0k-Ut8"/>
+                        <outlet property="emissionsSaved" destination="lbk-MP-YOl" id="NeN-Tu-zDG"/>
+                        <outlet property="moneySaved" destination="bFy-N3-jZN" id="uEA-Xw-jK5"/>
+                        <outlet property="totalBikes" destination="2nm-7D-tQL" id="eMi-9p-SX8"/>
+                        <outlet property="totalMiles" destination="QY3-u6-Iap" id="PSp-Rc-ec1"/>
+                        <outlet property="totalRides" destination="Len-fc-4PN" id="yRd-2r-r1e"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8l-uk-m3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="erl-S8-4yp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3133" y="1864"/>
+        </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="hwH-zu-0US">
             <objects>
@@ -864,6 +1130,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="Cpb-iG-g7A" kind="custom" customClass="ECSlidingSegue" id="L2F-kx-7ri"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kZZ-sp-G6s">
                                         <autoresizingMask key="autoresizingMask"/>
