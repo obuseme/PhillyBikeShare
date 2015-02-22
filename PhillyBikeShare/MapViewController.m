@@ -94,8 +94,8 @@
     self.locationManager.activityType = CLActivityTypeFitness;
     [self.locationManager requestAlwaysAuthorization];
     //This code is nice, but will center map on San Fran
-//    [self.locationManager startUpdatingLocation];
-    
+    [self.locationManager startUpdatingLocation];
+
     self.mapView.delegate = self;
     self.mapView.myLocationEnabled = YES;
     self.mapView.settings.myLocationButton = YES;
@@ -103,7 +103,7 @@
     self.centerOnUser = YES;
     
     //Artificially center camera on Philly for now
-    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1696943 zoom:13 bearing:0 viewingAngle:0]];
+//    [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1696943 zoom:13 bearing:0 viewingAngle:0]];
 
     [self retrieveRacks];
 }

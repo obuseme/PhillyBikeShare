@@ -1,4 +1,12 @@
-iOS App for the Philly Bike Share
+#Indego 2 Go
+##iOS App for the Philly Bike Share for Philly Codefest 2015
+
+The data powering this app is a Rest API built on node.js and mongodb.  It's code (also written during Philly Codefest 2015) is hosted on BitBucket at [https://bitbucket.org/dotsom/bikeshare-api](https://bitbucket.org/dotsom/bikeshare-api)
+
+![screenshot](readmescreenshot.png)
+![teampic](team.JPG)
+
+##iOS Local Setup Instructions
 
 Install mongodb via homebrew
 
