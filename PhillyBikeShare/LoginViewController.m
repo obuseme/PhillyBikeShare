@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "User.h"
 #import "MapViewController.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -81,7 +82,8 @@
                                        currentUser.email = [userDict objectForKey:@"email"];
                                        currentUser.trips = [userDict objectForKey:@"trips"];
                                        currentUser.averageDistance = [userDict objectForKey:@"averageDistance"];
-                                       [self performSegueWithIdentifier:@"showMap" sender:currentUser];
+                                       ((AppDelegate *)[UIApplication sharedApplication].delegate).currentUser = currentUser;
+                                       [self performSegueWithIdentifier:@"showMap" sender:nil];
                                    }
                                }
                            }];
@@ -91,10 +93,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    MapViewController *mapVC = segue.destinationViewController;
-    mapVC.currentUser = (User *)sender;
-    
+
     RackAPIManager *manager = [RackAPIManager new];
 
     [manager loadAllRacks];

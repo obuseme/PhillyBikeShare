@@ -45,8 +45,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self toggleStations:nil];
-    self.navigationItem.hidesBackButton = YES;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-long"]];
     [[self.stationButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
     [[self.racksButton imageView] setContentMode: UIViewContentModeScaleAspectFit];

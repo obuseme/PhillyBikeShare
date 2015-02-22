@@ -40,6 +40,7 @@
 		23F319971A996A0700B62401 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F319961A996A0700B62401 /* UIColor+HexColors.m */; };
 		23F3199A1A9979A400B62401 /* applepaylogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F319991A9979A400B62401 /* applepaylogo.png */; };
 		23F3199E1A997E0D00B62401 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3199D1A997E0D00B62401 /* User.m */; };
+		4103F48F1A998AAF00D679C9 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F48E1A998AAF00D679C9 /* MenuTableViewController.m */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -105,6 +106,8 @@
 		23F3199B1A997BBF00B62401 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		23F3199C1A997E0D00B62401 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		23F3199D1A997E0D00B62401 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		4103F48D1A998AAF00D679C9 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		4103F48E1A998AAF00D679C9 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				23F319981A996A1200B62401 /* UIColor+HexColors.h */,
 				23F319961A996A0700B62401 /* UIColor+HexColors.m */,
 				23F3199B1A997BBF00B62401 /* Constants.h */,
+				4103F48D1A998AAF00D679C9 /* MenuTableViewController.h */,
+				4103F48E1A998AAF00D679C9 /* MenuTableViewController.m */,
 			);
 			path = PhillyBikeShare;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 				23F319271A98B1CF00B62401 /* PhillyBikeShare.xcdatamodeld in Sources */,
 				23F319571A98FB5600B62401 /* MapMarkerView.m in Sources */,
 				23F319211A98B1CF00B62401 /* main.m in Sources */,
+				4103F48F1A998AAF00D679C9 /* MenuTableViewController.m in Sources */,
 				23F319521A98D9F900B62401 /* MathController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,10 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GoogleMaps.h>
 
-@class User;
-
 @interface MapViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate>
-
-@property (nonatomic) User *currentUser;
 
 @end
