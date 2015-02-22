@@ -51,6 +51,10 @@
 		4103F4A51A9A07A100D679C9 /* AccountSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4A41A9A07A100D679C9 /* AccountSettingsTableViewController.m */; };
 		4103F4A81A9A10F100D679C9 /* MyStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4A71A9A10F100D679C9 /* MyStatsViewController.m */; };
 		4103F4AB1A9A174300D679C9 /* LeaderboardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4AA1A9A174300D679C9 /* LeaderboardTableViewController.m */; };
+		4103F4AE1A9A1DB600D679C9 /* RouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4AD1A9A1DB600D679C9 /* RouteViewController.m */; };
+		4103F4B21A9A1F1100D679C9 /* Navigation 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4B11A9A1F1100D679C9 /* Navigation 1.png */; };
+		4103F4B51A9A22DF00D679C9 /* Navigation 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4B31A9A22DF00D679C9 /* Navigation 3.png */; };
+		4103F4B81A9A24DF00D679C9 /* Navigation 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4B71A9A24DF00D679C9 /* Navigation 2.png */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -132,6 +136,11 @@
 		4103F4A71A9A10F100D679C9 /* MyStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyStatsViewController.m; path = ../MyStatsViewController.m; sourceTree = "<group>"; };
 		4103F4A91A9A174300D679C9 /* LeaderboardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardTableViewController.h; sourceTree = "<group>"; };
 		4103F4AA1A9A174300D679C9 /* LeaderboardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardTableViewController.m; sourceTree = "<group>"; };
+		4103F4AC1A9A1DB600D679C9 /* RouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteViewController.h; sourceTree = "<group>"; };
+		4103F4AD1A9A1DB600D679C9 /* RouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteViewController.m; sourceTree = "<group>"; };
+		4103F4B11A9A1F1100D679C9 /* Navigation 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation 1.png"; sourceTree = "<group>"; };
+		4103F4B31A9A22DF00D679C9 /* Navigation 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation 3.png"; sourceTree = "<group>"; };
+		4103F4B71A9A24DF00D679C9 /* Navigation 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation 2.png"; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -218,6 +227,8 @@
 				4103F48E1A998AAF00D679C9 /* MenuTableViewController.m */,
 				4103F4A91A9A174300D679C9 /* LeaderboardTableViewController.h */,
 				4103F4AA1A9A174300D679C9 /* LeaderboardTableViewController.m */,
+				4103F4AC1A9A1DB600D679C9 /* RouteViewController.h */,
+				4103F4AD1A9A1DB600D679C9 /* RouteViewController.m */,
 			);
 			path = PhillyBikeShare;
 			sourceTree = "<group>";
@@ -291,6 +302,9 @@
 		F68051C71A98EE0400A0F10A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4103F4B71A9A24DF00D679C9 /* Navigation 2.png */,
+				4103F4B31A9A22DF00D679C9 /* Navigation 3.png */,
+				4103F4B11A9A1F1100D679C9 /* Navigation 1.png */,
 				4103F49C1A99A71200D679C9 /* cross.png */,
 				4103F49D1A99A71200D679C9 /* cross@2x.png */,
 				4103F4941A999C0F00D679C9 /* hamburger.png */,
@@ -415,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
+				4103F4B81A9A24DF00D679C9 /* Navigation 2.png in Resources */,
 				F68051CB1A99087200A0F10A /* Sign In_image.png in Resources */,
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
 				4103F4971A999C0F00D679C9 /* hamburger@2x.png in Resources */,
@@ -435,11 +450,13 @@
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
 				23F3199A1A9979A400B62401 /* applepaylogo.png in Resources */,
 				23F319931A99596B00B62401 /* station icon.png in Resources */,
+				4103F4B51A9A22DF00D679C9 /* Navigation 3.png in Resources */,
 				23F319711A991C0F00B62401 /* Icon Bikes@2x.png in Resources */,
 				4103F4961A999C0F00D679C9 /* hamburger.png in Resources */,
 				23F319771A991C0F00B62401 /* Icon Stations.png in Resources */,
 				23F319951A99596B00B62401 /* bikeicon.png in Resources */,
 				23F319721A991C0F00B62401 /* Icon Rack@2x.png in Resources */,
+				4103F4B21A9A1F1100D679C9 /* Navigation 1.png in Resources */,
 				23F319941A99596B00B62401 /* bikeicon@2x.png in Resources */,
 				23F319801A99274200B62401 /* Station Pop Up.png in Resources */,
 				23F319751A991C0F00B62401 /* Destination Icons.png in Resources */,
@@ -505,6 +522,7 @@
 				23F319241A98B1CF00B62401 /* AppDelegate.m in Sources */,
 				4103F4A81A9A10F100D679C9 /* MyStatsViewController.m in Sources */,
 				93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */,
+				4103F4AE1A9A1DB600D679C9 /* RouteViewController.m in Sources */,
 				23F3194F1A98B55800B62401 /* MapViewController.m in Sources */,
 				93999F121A98FF3500BBC1F1 /* RackAPIManager.swift in Sources */,
 				93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */,
