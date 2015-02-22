@@ -41,7 +41,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7h-9m-LSL">
                                         <rect key="frame" x="8" y="16" width="264" height="36"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kA-XK-j2F">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@gmail.com" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kA-XK-j2F">
                                                 <rect key="frame" x="5" y="3" width="259" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -93,7 +93,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="PRy-OS-4cc" kind="show" id="no2-kY-5hI"/>
+                                            <action selector="login:" destination="8hS-Li-RxN" eventType="touchUpInside" id="QFT-fc-aIq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -152,7 +152,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="PRy-OS-4cc" kind="show" id="c61-ct-1B3"/>
+                                            <segue destination="PRy-OS-4cc" kind="show" identifier="showMap" id="c61-ct-1B3"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="P89-Pm-NFv">
@@ -195,6 +195,7 @@
                     <navigationItem key="navigationItem" id="iax-E9-QRW"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="emailField" destination="4kA-XK-j2F" id="Uh7-gF-ibd"/>
                         <outlet property="emailLabelContainerView" destination="q7h-9m-LSL" id="Zqx-xA-dQJ"/>
                         <outlet property="passwordLabelContainerView" destination="1C4-30-qBa" id="h3c-Cl-nuz"/>
                     </connections>
@@ -553,6 +554,6 @@
         <image name="station icon.png" width="29" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="no2-kY-5hI"/>
+        <segue reference="c61-ct-1B3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,11 +9,15 @@
 #import "LoginViewController.h"
 #import "PhillyBikeShare-Swift.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Constants.h"
+#import "User.h"
+#import "MapViewController.h"
 
 @interface LoginViewController ()
 
 @property (nonatomic, weak) IBOutlet UIView *emailLabelContainerView;
 @property (nonatomic, weak) IBOutlet UIView *passwordLabelContainerView;
+@property (nonatomic, weak) IBOutlet UITextField *emailField;
 
 @end
 
@@ -37,11 +41,60 @@
     [super viewWillDisappear:animated];
 }
 
+- (IBAction)login:(id)sender
+{
+    NSString *loginUrlString = [NSString stringWithFormat:@"%@/api/user/email/%@", BASE_URL, self.emailField.text];
+    NSURL *loginUrl = [NSURL URLWithString:loginUrlString];
+    NSURLRequest *loginRequest = [NSURLRequest requestWithURL:loginUrl];
+    [NSURLConnection sendAsynchronousRequest:loginRequest
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               if (connectionError != nil)
+                               {
+                                   [[[UIAlertView alloc] initWithTitle:@"API ERROR"
+                                                              message:[connectionError description]
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil] show];
+                               }
+                               else
+                               {
+                                   NSError *deserializerError;
+                                   NSDictionary *userDict = [[NSJSONSerialization JSONObjectWithData:data
+                                                                                            options:NSJSONReadingMutableContainers
+                                                                                              error:&deserializerError] objectForKey:@"data"][0];
+                                   if (deserializerError != nil)
+                                   {
+                                       [[[UIAlertView alloc] initWithTitle:@"JSON ERROR"
+                                                                   message:[deserializerError description]
+                                                                  delegate:nil
+                                                         cancelButtonTitle:@"OK"
+                                                         otherButtonTitles:nil] show];
+                                       
+                                   }
+                                   else
+                                   {
+                                       User *currentUser = [[User alloc] init];
+                                       currentUser.firstName = [userDict objectForKey:@"firstName"];
+                                       currentUser.lastName = [userDict objectForKey:@"lastName"];
+                                       currentUser.userId = [userDict objectForKey:@"_id"];
+                                       currentUser.email = [userDict objectForKey:@"email"];
+                                       currentUser.trips = [userDict objectForKey:@"trips"];
+                                       currentUser.averageDistance = [userDict objectForKey:@"averageDistance"];
+                                       [self performSegueWithIdentifier:@"showMap" sender:currentUser];
+                                   }
+                               }
+                           }];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    
+    MapViewController *mapVC = segue.destinationViewController;
+    mapVC.currentUser = (User *)sender;
+    
     RackAPIManager *manager = [RackAPIManager new];
 
     [manager loadAllRacks];
