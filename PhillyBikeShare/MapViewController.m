@@ -12,6 +12,7 @@
 #import "Rack.h"
 #import "AppDelegate.h"
 #import "UIColor+HexColors.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MapViewController ()
 
@@ -39,12 +40,23 @@
 @property (nonatomic, weak) IBOutlet UIButton *bikesButton;
 @property (nonatomic, weak) IBOutlet UIButton *racksButton;
 
+@property (nonatomic, weak) IBOutlet UIView *searchContainerView;
+@property (nonatomic, weak) IBOutlet UITextField *searchField;
+
 @end
 
 @implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.searchContainerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.searchContainerView.layer.borderWidth = 1.0f;
+    UIImageView *imgSearch=[[UIImageView alloc] initWithFrame:CGRectMake(0, -10, 20, 20)];
+    [imgSearch setImage:[UIImage imageNamed:@"search.png"]];
+    [imgSearch setContentMode:UIViewContentModeScaleAspectFit];
+    self.searchField.leftView=imgSearch;
+    self.searchField.leftViewMode=UITextFieldViewModeAlways;
 
     [self toggleStations:nil];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-long"]];

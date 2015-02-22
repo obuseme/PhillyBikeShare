@@ -240,6 +240,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkY-HR-MgB">
+                                <rect key="frame" x="30" y="124" width="540" height="32"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-RU-Pc5">
+                                        <rect key="frame" x="6" y="3" width="523" height="31"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="cCV-or-gyS"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k34-4I-z7s">
                                 <rect key="frame" x="0.0" y="64" width="200" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.50980392156862742" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -449,6 +464,7 @@
                             <constraint firstAttribute="bottom" secondItem="Wr0-ek-Y3E" secondAttribute="bottom" id="2I7-Gf-qcA"/>
                             <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="2Y0-aj-3sG" secondAttribute="bottom" constant="20" id="3xP-Ph-M5a"/>
                             <constraint firstItem="rql-Lb-ZjQ" firstAttribute="top" secondItem="deO-ox-7cz" secondAttribute="bottom" constant="-28" id="61A-ow-Y7Y"/>
+                            <constraint firstAttribute="trailing" secondItem="gkY-HR-MgB" secondAttribute="trailing" constant="30" id="BPm-Z7-prP"/>
                             <constraint firstItem="Ucw-CU-SvB" firstAttribute="width" secondItem="rql-Lb-ZjQ" secondAttribute="width" id="CDy-b1-pS1"/>
                             <constraint firstAttribute="trailing" secondItem="rql-Lb-ZjQ" secondAttribute="trailing" id="CW4-bG-Vfe"/>
                             <constraint firstItem="uHk-1Y-9t8" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="D1q-5f-Rz1"/>
@@ -462,7 +478,9 @@
                             <constraint firstItem="jTv-DM-HgU" firstAttribute="top" secondItem="kTF-fc-4Nm" secondAttribute="bottom" constant="-3" id="U5N-gm-IMZ"/>
                             <constraint firstItem="D5o-A8-E9J" firstAttribute="top" secondItem="deO-ox-7cz" secondAttribute="bottom" constant="-1" id="UcX-RP-58c"/>
                             <constraint firstItem="Ucw-CU-SvB" firstAttribute="leading" secondItem="k34-4I-z7s" secondAttribute="trailing" id="Ulb-fP-pVg"/>
+                            <constraint firstItem="gkY-HR-MgB" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" constant="30" id="XNV-uk-Kxa"/>
                             <constraint firstAttribute="centerX" secondItem="2Y0-aj-3sG" secondAttribute="centerX" id="ZdP-4n-REO"/>
+                            <constraint firstItem="gkY-HR-MgB" firstAttribute="top" secondItem="rql-Lb-ZjQ" secondAttribute="bottom" constant="12" id="Zms-QR-XHZ"/>
                             <constraint firstItem="6d9-ZA-4T3" firstAttribute="top" secondItem="dIu-oe-13i" secondAttribute="bottom" constant="1" id="eSU-2o-3ey"/>
                             <constraint firstItem="dIu-oe-13i" firstAttribute="centerX" secondItem="6d9-ZA-4T3" secondAttribute="centerX" constant="0.5" id="hOP-k4-wHK"/>
                             <constraint firstItem="Ucw-CU-SvB" firstAttribute="centerY" secondItem="rql-Lb-ZjQ" secondAttribute="centerY" id="hii-B8-cC6"/>
@@ -472,6 +490,7 @@
                             <constraint firstItem="k34-4I-z7s" firstAttribute="centerY" secondItem="Ucw-CU-SvB" secondAttribute="centerY" id="rIX-rS-Dr4"/>
                             <constraint firstItem="k34-4I-z7s" firstAttribute="centerX" secondItem="dIu-oe-13i" secondAttribute="centerX" id="tTm-x8-LNS"/>
                             <constraint firstItem="kTF-fc-4Nm" firstAttribute="centerX" secondItem="Ucw-CU-SvB" secondAttribute="centerX" id="ws4-Fg-FvG"/>
+                            <constraint firstAttribute="centerX" secondItem="gkY-HR-MgB" secondAttribute="centerX" id="xkY-HA-GpT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sgq-gL-xWK">
@@ -487,6 +506,8 @@
                         <outlet property="mapMarkerViewConstraint" destination="15U-9D-pP8" id="66M-M8-npP"/>
                         <outlet property="mapView" destination="Wr0-ek-Y3E" id="Twj-c8-fGV"/>
                         <outlet property="racksButton" destination="rql-Lb-ZjQ" id="BYw-Z2-cqF"/>
+                        <outlet property="searchContainerView" destination="gkY-HR-MgB" id="TiV-re-FBH"/>
+                        <outlet property="searchField" destination="DBu-RU-Pc5" id="TqR-yL-FKJ"/>
                         <outlet property="startStopRideButton" destination="2Y0-aj-3sG" id="o4S-bb-wKe"/>
                         <outlet property="stationButton" destination="k34-4I-z7s" id="pM0-02-z92"/>
                         <segue destination="ftc-7J-njg" kind="unwind" unwindAction="unwindToMenuViewController:" id="Gaf-u2-rbV"/>

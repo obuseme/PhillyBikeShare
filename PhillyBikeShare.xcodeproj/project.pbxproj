@@ -41,6 +41,8 @@
 		23F3199A1A9979A400B62401 /* applepaylogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F319991A9979A400B62401 /* applepaylogo.png */; };
 		23F3199E1A997E0D00B62401 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3199D1A997E0D00B62401 /* User.m */; };
 		4103F48F1A998AAF00D679C9 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F48E1A998AAF00D679C9 /* MenuTableViewController.m */; };
+		4103F4921A9999FA00D679C9 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4901A9999FA00D679C9 /* search.png */; };
+		4103F4931A9999FA00D679C9 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4911A9999FA00D679C9 /* search@2x.png */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -108,6 +110,8 @@
 		23F3199D1A997E0D00B62401 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		4103F48D1A998AAF00D679C9 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		4103F48E1A998AAF00D679C9 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		4103F4901A9999FA00D679C9 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		4103F4911A9999FA00D679C9 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 		F68051C71A98EE0400A0F10A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4103F4901A9999FA00D679C9 /* search.png */,
+				4103F4911A9999FA00D679C9 /* search@2x.png */,
 				23F319991A9979A400B62401 /* applepaylogo.png */,
 				23F3198A1A99596B00B62401 /* Racks-Icon@2x.png */,
 				23F3198B1A99596B00B62401 /* Racks-Icon.png */,
@@ -375,6 +381,7 @@
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
 				F68051CB1A99087200A0F10A /* Sign In_image.png in Resources */,
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
+				4103F4921A9999FA00D679C9 /* search.png in Resources */,
 				F6D306AE1A9922DA0015AA77 /* arrow.png in Resources */,
 				23F319921A99596B00B62401 /* station icon@2x.png in Resources */,
 				23F319761A991C0F00B62401 /* Destination Icons@2x.png in Resources */,
@@ -383,6 +390,7 @@
 				23F3197B1A99222800B62401 /* logo-long@2x.png in Resources */,
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
 				23F319811A99274200B62401 /* Station Pop Up@3x.png in Resources */,
+				4103F4931A9999FA00D679C9 /* search@2x.png in Resources */,
 				23F319731A991C0F00B62401 /* Icon Rack.png in Resources */,
 				23F3197F1A99274200B62401 /* Station Pop Up@2x.png in Resources */,
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
