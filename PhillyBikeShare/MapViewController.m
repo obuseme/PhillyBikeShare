@@ -183,6 +183,7 @@
 {
     if (! self.trackingRide)
     {
+        self.startStopRideButton.backgroundColor = [UIColor redColor];
         self.ridePath = [GMSMutablePath path];
 
         self.seconds = 0;
@@ -191,7 +192,7 @@
         self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self
                                                     selector:@selector(eachSecond) userInfo:nil repeats:YES];
         self.trackingRide = YES;
-        [self.startStopRideButton setTitle:@"Stop Ride" forState:UIControlStateNormal];
+        [self.startStopRideButton setTitle:@"STOP RIDE" forState:UIControlStateNormal];
     }
     else
     {
@@ -208,7 +209,8 @@
          calories           : { type: Number, required: false }
          
          */
-        
+
+        self.startStopRideButton.backgroundColor = [UIColor colorWithHexString:@"0082CB"];
         NSString *time = [NSString stringWithFormat:@"Time: %@",  [MathController stringifySecondCount:self.seconds usingLongFormat:NO]];
         NSString *distance = [NSString stringWithFormat:@"Distance: %@", [MathController stringifyDistance:self.distance]];
         NSString *pace = [NSString stringWithFormat:@"Pace: %@",  [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
@@ -216,7 +218,7 @@
 
         [[[UIAlertView alloc] initWithTitle:@"Nice Ride!" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         self.trackingRide = NO;
-        [self.startStopRideButton setTitle:@"Start a Ride" forState:UIControlStateNormal];
+        [self.startStopRideButton setTitle:@"START RIDE" forState:UIControlStateNormal];
         [self.ridePath removeAllCoordinates];
         self.ridePolyline.map = nil;
     }

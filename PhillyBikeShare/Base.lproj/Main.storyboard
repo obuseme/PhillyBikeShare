@@ -300,8 +300,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y0-aj-3sG">
-                                <rect key="frame" x="260" y="550" width="81" height="30"/>
-                                <state key="normal" title="Start a Ride">
+                                <rect key="frame" x="230" y="544" width="140" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.50980392159999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q5z-mR-Cev"/>
+                                    <constraint firstAttribute="width" constant="140" id="daJ-bc-A0c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <state key="normal" title="START RIDE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -464,7 +471,7 @@
                             <constraint firstItem="jTv-DM-HgU" firstAttribute="centerX" secondItem="kTF-fc-4Nm" secondAttribute="centerX" id="1tg-or-iGj"/>
                             <constraint firstItem="Wr0-ek-Y3E" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="29t-tV-etm"/>
                             <constraint firstAttribute="bottom" secondItem="Wr0-ek-Y3E" secondAttribute="bottom" id="2I7-Gf-qcA"/>
-                            <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="2Y0-aj-3sG" secondAttribute="bottom" constant="20" id="3xP-Ph-M5a"/>
+                            <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="2Y0-aj-3sG" secondAttribute="bottom" constant="16" id="3xP-Ph-M5a"/>
                             <constraint firstItem="rql-Lb-ZjQ" firstAttribute="top" secondItem="deO-ox-7cz" secondAttribute="bottom" constant="-28" id="61A-ow-Y7Y"/>
                             <constraint firstAttribute="trailing" secondItem="gkY-HR-MgB" secondAttribute="trailing" constant="30" id="BPm-Z7-prP"/>
                             <constraint firstItem="Ucw-CU-SvB" firstAttribute="width" secondItem="rql-Lb-ZjQ" secondAttribute="width" id="CDy-b1-pS1"/>
