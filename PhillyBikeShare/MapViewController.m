@@ -50,6 +50,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.navigationItem.leftBarButtonItem setTintColor:[UIColor darkGrayColor]];
+    self.navigationItem.leftBarButtonItem.image = [UIImage imageNamed:@"hamburger"];
+
     self.searchContainerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.searchContainerView.layer.borderWidth = 1.0f;
     UIImageView *imgSearch=[[UIImageView alloc] initWithFrame:CGRectMake(0, -10, 20, 20)];

@@ -496,7 +496,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sgq-gL-xWK">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="xrA-8P-wsl">
+                        <barButtonItem key="leftBarButtonItem" id="xrA-8P-wsl">
                             <connections>
                                 <segue destination="ftc-7J-njg" kind="unwind" unwindAction="unwindToMenuViewController:" id="RpO-9x-omO"/>
                             </connections>
