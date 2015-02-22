@@ -11,6 +11,7 @@
 #import "MapMarkerView.h"
 #import "Rack.h"
 #import "AppDelegate.h"
+#import "UIColor+HexColors.h"
 
 @interface MapViewController ()
 
@@ -44,6 +45,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self toggleStations:nil];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-long"]];
     [[self.stationButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
@@ -87,12 +89,13 @@
     NSArray *rackFromCoreData = [context executeFetchRequest:fetchRequest error:&error];
     self.racks = rackFromCoreData;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self addMarkersFromRacks];
+        [self addMarkersForAllStations];
     });
 }
 
-- (void)addMarkersFromRacks
+- (void)addMarkersForAllStations
 {
+    [self.mapView clear];
     for (Rack *rack in self.racks)
     {
         CLLocationCoordinate2D position = CLLocationCoordinate2DMake([rack.lat doubleValue], [rack.lng doubleValue]);
@@ -103,7 +106,63 @@
     }
 }
 
+- (void)addMarkersForStationsWithBikes
+{
+    [self.mapView clear];
+    for (Rack *rack in self.racks)
+    {
+        if (rack.availBikes > 0)
+        {
+            CLLocationCoordinate2D position = CLLocationCoordinate2DMake([rack.lat doubleValue], [rack.lng doubleValue]);
+            GMSMarker *marker = [GMSMarker markerWithPosition:position];
+            marker.icon = [UIImage imageNamed:@"Icon Bikes"];
+            marker.map = self.mapView;
+            marker.userData = rack;
+        }
+    }
+}
+
+- (void)addMarkersForStationsWithOpenRacks
+{
+    [self.mapView clear];
+    for (Rack *rack in self.racks)
+    {
+        if (([rack.maxBikes intValue] - [rack.availBikes intValue]) != 0)
+        {
+            CLLocationCoordinate2D position = CLLocationCoordinate2DMake([rack.lat doubleValue], [rack.lng doubleValue]);
+            GMSMarker *marker = [GMSMarker markerWithPosition:position];
+            marker.icon = [UIImage imageNamed:@"Icon Rack"];
+            marker.map = self.mapView;
+            marker.userData = rack;
+        }
+    }
+}
+
 #pragma mark - IBActions
+
+- (IBAction)toggleStations:(id)sender
+{
+    [self.stationButton setBackgroundColor:[UIColor colorWithHexString:@"0071B3"]];
+    [self.bikesButton setBackgroundColor:[UIColor colorWithHexString:@"96D60B"]];
+    [self.racksButton setBackgroundColor:[UIColor colorWithHexString:@"FF9001"]];
+    [self addMarkersForAllStations];
+}
+
+- (IBAction)toggleBikes:(id)sender
+{
+    [self.stationButton setBackgroundColor:[UIColor colorWithHexString:@"0082CB"]];
+    [self.bikesButton setBackgroundColor:[UIColor colorWithHexString:@"84BD00"]];
+    [self.racksButton setBackgroundColor:[UIColor colorWithHexString:@"FF9001"]];
+    [self addMarkersForStationsWithBikes];
+}
+
+- (IBAction)toggleRacks:(id)sender
+{
+    [self.stationButton setBackgroundColor:[UIColor colorWithHexString:@"0082CB"]];
+    [self.bikesButton setBackgroundColor:[UIColor colorWithHexString:@"96D60B"]];
+    [self.racksButton setBackgroundColor:[UIColor colorWithHexString:@"E68200"]];
+    [self addMarkersForStationsWithOpenRacks];
+}
 
 - (IBAction)startStopRidePressed:(id)sender
 {

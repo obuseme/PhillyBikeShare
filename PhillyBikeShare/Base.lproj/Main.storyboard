@@ -219,35 +219,47 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-vY-WGd">
-                                <rect key="frame" x="0.0" y="65" width="200" height="79"/>
-                                <color key="backgroundColor" red="0.047058823529411764" green="0.35686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k34-4I-z7s">
+                                <rect key="frame" x="0.0" y="64" width="200" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.50980392156862742" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="pEH-Jj-3V1"/>
+                                    <constraint firstAttribute="height" constant="48" id="WNE-ZY-tMF"/>
                                 </constraints>
-                                <state key="normal" image="Station Pop Up.png">
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleStations:" destination="PRy-OS-4cc" eventType="touchUpInside" id="mwF-Ly-nlN"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6Q-z3-3yJ">
-                                <rect key="frame" x="200" y="65" width="200" height="79"/>
-                                <color key="backgroundColor" red="0.047058823529411764" green="0.35686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucw-CU-SvB">
+                                <rect key="frame" x="200" y="64" width="200" height="48"/>
+                                <color key="backgroundColor" red="0.58823529411764708" green="0.83921568627450982" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="Hke-f3-7Me"/>
+                                    <constraint firstAttribute="height" constant="48" id="YbC-hb-K1M"/>
                                 </constraints>
-                                <state key="normal" image="Station Pop Up.png">
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleBikes:" destination="PRy-OS-4cc" eventType="touchUpInside" id="5DM-aJ-02z"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcn-WJ-SmV">
-                                <rect key="frame" x="400" y="65" width="200" height="79"/>
-                                <color key="backgroundColor" red="0.047058823529411764" green="0.35686274509803922" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rql-Lb-ZjQ">
+                                <rect key="frame" x="400" y="64" width="200" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.56470588235294117" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="kZK-g4-sFF"/>
+                                    <constraint firstAttribute="height" constant="48" id="60w-ur-UHV"/>
                                 </constraints>
-                                <state key="normal" image="Station Pop Up.png">
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleRacks:" destination="PRy-OS-4cc" eventType="touchUpInside" id="oiR-AB-Nbn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y0-aj-3sG">
                                 <rect key="frame" x="260" y="550" width="81" height="30"/>
@@ -329,45 +341,89 @@
                                     <outlet property="numberOfRacksLabel" destination="Xji-Da-NP9" id="s3h-W3-nev"/>
                                 </connections>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="station icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="dIu-oe-13i">
+                                <rect key="frame" x="90" y="70" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="IBg-Y8-z60"/>
+                                    <constraint firstAttribute="height" constant="20" id="JOT-BX-uDY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bikeicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="kTF-fc-4Nm">
+                                <rect key="frame" x="284" y="70" width="32" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="NXf-mE-Ehz"/>
+                                    <constraint firstAttribute="height" constant="24" id="huz-p6-GOk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Racks-Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="deO-ox-7cz">
+                                <rect key="frame" x="490" y="72" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="D2e-Ti-soU"/>
+                                    <constraint firstAttribute="height" constant="20" id="N9a-sf-IaV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d9-ZA-4T3">
+                                <rect key="frame" x="77" y="91" width="46" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bikes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTv-DM-HgU">
+                                <rect key="frame" x="285" y="91" width="31" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Racks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5o-A8-E9J">
+                                <rect key="frame" x="483" y="91" width="35" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rql-Lb-ZjQ" firstAttribute="leading" secondItem="Ucw-CU-SvB" secondAttribute="trailing" id="0ZK-u5-tKl"/>
+                            <constraint firstItem="jTv-DM-HgU" firstAttribute="centerX" secondItem="kTF-fc-4Nm" secondAttribute="centerX" id="1tg-or-iGj"/>
                             <constraint firstItem="Wr0-ek-Y3E" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="29t-tV-etm"/>
                             <constraint firstAttribute="bottom" secondItem="Wr0-ek-Y3E" secondAttribute="bottom" id="2I7-Gf-qcA"/>
                             <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="2Y0-aj-3sG" secondAttribute="bottom" constant="20" id="3xP-Ph-M5a"/>
-                            <constraint firstItem="Xcn-WJ-SmV" firstAttribute="leading" secondItem="d6Q-z3-3yJ" secondAttribute="trailing" id="6aT-wN-8lP"/>
-                            <constraint firstItem="Xcn-WJ-SmV" firstAttribute="leading" secondItem="1Z3-vY-WGd" secondAttribute="trailing" constant="200" id="8qx-Rp-dxa"/>
+                            <constraint firstItem="rql-Lb-ZjQ" firstAttribute="top" secondItem="deO-ox-7cz" secondAttribute="bottom" constant="-28" id="61A-ow-Y7Y"/>
                             <constraint firstItem="eWM-Kq-Wkj" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="AXz-qr-kar"/>
+                            <constraint firstItem="Ucw-CU-SvB" firstAttribute="width" secondItem="rql-Lb-ZjQ" secondAttribute="width" id="CDy-b1-pS1"/>
+                            <constraint firstAttribute="trailing" secondItem="rql-Lb-ZjQ" secondAttribute="trailing" id="CW4-bG-Vfe"/>
                             <constraint firstAttribute="trailing" secondItem="eWM-Kq-Wkj" secondAttribute="trailing" id="DCQ-3j-rWd"/>
-                            <constraint firstItem="1Z3-vY-WGd" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leadingMargin" constant="-16" id="FVD-1h-OCX"/>
-                            <constraint firstItem="Xcn-WJ-SmV" firstAttribute="width" secondItem="1Z3-vY-WGd" secondAttribute="width" id="Fdg-o5-Y3i"/>
-                            <constraint firstItem="d6Q-z3-3yJ" firstAttribute="leading" secondItem="1Z3-vY-WGd" secondAttribute="trailing" id="GCH-lV-82y"/>
+                            <constraint firstItem="Ucw-CU-SvB" firstAttribute="top" secondItem="kTF-fc-4Nm" secondAttribute="bottom" constant="-30" id="EE9-iX-7TA"/>
+                            <constraint firstItem="deO-ox-7cz" firstAttribute="centerX" secondItem="rql-Lb-ZjQ" secondAttribute="centerX" constant="0.5" id="Erk-4L-kAV"/>
+                            <constraint firstItem="k34-4I-z7s" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="GQu-6Q-gpA"/>
                             <constraint firstAttribute="trailing" secondItem="Wr0-ek-Y3E" secondAttribute="trailing" id="Jhj-Or-Mbc"/>
-                            <constraint firstItem="d6Q-z3-3yJ" firstAttribute="centerY" secondItem="1Z3-vY-WGd" secondAttribute="centerY" id="Kpd-Ob-G0E"/>
-                            <constraint firstItem="1Z3-vY-WGd" firstAttribute="top" secondItem="ARV-eh-UjA" secondAttribute="bottom" constant="1" id="Pgw-XA-cY4"/>
-                            <constraint firstItem="1Z3-vY-WGd" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="VKG-fA-NhS"/>
+                            <constraint firstItem="k34-4I-z7s" firstAttribute="top" secondItem="dIu-oe-13i" secondAttribute="bottom" constant="-26" id="OEw-Py-kqm"/>
+                            <constraint firstItem="k34-4I-z7s" firstAttribute="top" secondItem="ARV-eh-UjA" secondAttribute="bottom" id="QMa-AI-PkN"/>
+                            <constraint firstItem="jTv-DM-HgU" firstAttribute="top" secondItem="kTF-fc-4Nm" secondAttribute="bottom" constant="-3" id="U5N-gm-IMZ"/>
+                            <constraint firstItem="D5o-A8-E9J" firstAttribute="top" secondItem="deO-ox-7cz" secondAttribute="bottom" constant="-1" id="UcX-RP-58c"/>
+                            <constraint firstItem="Ucw-CU-SvB" firstAttribute="leading" secondItem="k34-4I-z7s" secondAttribute="trailing" id="Ulb-fP-pVg"/>
                             <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="eWM-Kq-Wkj" secondAttribute="bottom" constant="-165" id="Xwz-FU-KXL"/>
                             <constraint firstAttribute="centerX" secondItem="2Y0-aj-3sG" secondAttribute="centerX" id="ZdP-4n-REO"/>
-                            <constraint firstItem="d6Q-z3-3yJ" firstAttribute="width" secondItem="Xcn-WJ-SmV" secondAttribute="width" id="kuL-0t-JcC"/>
+                            <constraint firstItem="6d9-ZA-4T3" firstAttribute="top" secondItem="dIu-oe-13i" secondAttribute="bottom" constant="1" id="eSU-2o-3ey"/>
+                            <constraint firstItem="dIu-oe-13i" firstAttribute="centerX" secondItem="6d9-ZA-4T3" secondAttribute="centerX" constant="0.5" id="hOP-k4-wHK"/>
+                            <constraint firstItem="Ucw-CU-SvB" firstAttribute="centerY" secondItem="rql-Lb-ZjQ" secondAttribute="centerY" id="hii-B8-cC6"/>
+                            <constraint firstItem="k34-4I-z7s" firstAttribute="width" secondItem="Ucw-CU-SvB" secondAttribute="width" id="mft-kQ-Uh3"/>
                             <constraint firstItem="Wr0-ek-Y3E" firstAttribute="top" secondItem="Kk4-mx-ZAJ" secondAttribute="top" id="mwI-KJ-cFv"/>
-                            <constraint firstItem="d6Q-z3-3yJ" firstAttribute="centerY" secondItem="Xcn-WJ-SmV" secondAttribute="centerY" id="oNI-1D-sRS"/>
-                            <constraint firstAttribute="trailing" secondItem="Xcn-WJ-SmV" secondAttribute="trailing" id="vOn-NU-QGi"/>
+                            <constraint firstItem="deO-ox-7cz" firstAttribute="centerX" secondItem="D5o-A8-E9J" secondAttribute="centerX" id="py2-CC-bM9"/>
+                            <constraint firstItem="k34-4I-z7s" firstAttribute="centerY" secondItem="Ucw-CU-SvB" secondAttribute="centerY" id="rIX-rS-Dr4"/>
+                            <constraint firstItem="k34-4I-z7s" firstAttribute="centerX" secondItem="dIu-oe-13i" secondAttribute="centerX" id="tTm-x8-LNS"/>
+                            <constraint firstItem="kTF-fc-4Nm" firstAttribute="centerX" secondItem="Ucw-CU-SvB" secondAttribute="centerX" id="ws4-Fg-FvG"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="FVD-1h-OCX"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="bikesButton" destination="d6Q-z3-3yJ" id="iNy-n5-Aaw"/>
+                        <outlet property="bikesButton" destination="Ucw-CU-SvB" id="Ui8-iG-11S"/>
                         <outlet property="mapMarkerView" destination="eWM-Kq-Wkj" id="OqD-q5-JPy"/>
                         <outlet property="mapMarkerViewConstraint" destination="Xwz-FU-KXL" id="Ft7-4w-Dzg"/>
                         <outlet property="mapView" destination="Wr0-ek-Y3E" id="Twj-c8-fGV"/>
-                        <outlet property="racksButton" destination="Xcn-WJ-SmV" id="rb6-x2-ZHd"/>
+                        <outlet property="racksButton" destination="rql-Lb-ZjQ" id="BYw-Z2-cqF"/>
                         <outlet property="startStopRideButton" destination="2Y0-aj-3sG" id="o4S-bb-wKe"/>
-                        <outlet property="stationButton" destination="1Z3-vY-WGd" id="IcB-Gi-6ds"/>
+                        <outlet property="stationButton" destination="k34-4I-z7s" id="pM0-02-z92"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCg-qH-4sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -451,9 +507,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Racks-Icon.png" width="33" height="32"/>
         <image name="Sign In_image.png" width="640" height="1136"/>
-        <image name="Station Pop Up.png" width="200" height="79"/>
         <image name="arrow.png" width="34" height="30"/>
+        <image name="bikeicon.png" width="43" height="32"/>
+        <image name="station icon.png" width="29" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="no2-kY-5hI"/>
