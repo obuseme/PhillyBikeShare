@@ -13,6 +13,8 @@
 #import "AppDelegate.h"
 #import "UIColor+HexColors.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Constants.h"
+#import "User.h"
 
 @interface MapViewController ()
 
@@ -48,6 +50,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *paceLabel;
+
+@property (nonatomic) NSDate *startDate;
 
 @end
 
@@ -200,6 +204,7 @@
         self.locations = [NSMutableArray array];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self
                                                     selector:@selector(eachSecond) userInfo:nil repeats:YES];
+        self.startDate = [NSDate date];
         self.trackingRide = YES;
         [self.startStopRideButton setTitle:@"STOP RIDE" forState:UIControlStateNormal];
     }
@@ -229,6 +234,50 @@
         [self.startStopRideButton setTitle:@"START RIDE" forState:UIControlStateNormal];
         [self.ridePath removeAllCoordinates];
         self.ridePolyline.map = nil;
+
+        //franklin square rack id 54e88b409dcd8ff2802ca4ed
+        NSString *urlString = [NSString stringWithFormat:@"%@/api/ride/new", BASE_URL];
+        NSURL *url = [NSURL URLWithString:urlString];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+
+        User *currentUser = ((AppDelegate *)[UIApplication sharedApplication].delegate).currentUser;
+        NSString * str = [NSString stringWithFormat:@"{\"userId\" : \"%@\",\"startRackId\":\"54e88b409dcd8ff2802ca4ed\",\"endRackId\":\"54e88b409dcd8ff2802ca4ee\",\"seconds\":%d,\"distance\":%d,\"startTime\":\"%@\"}", currentUser.userId, self.seconds, 2, self.startDate];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:[str dataUsingEncoding:NSUTF8StringEncoding]];
+
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                                   if (connectionError != nil)
+                                   {
+                                       [[[UIAlertView alloc] initWithTitle:@"API ERROR"
+                                                                   message:[connectionError description]
+                                                                  delegate:nil
+                                                         cancelButtonTitle:@"OK"
+                                                         otherButtonTitles:nil] show];
+                                   }
+                                   else
+                                   {
+                                       NSError *deserializerError;
+                                       [NSJSONSerialization JSONObjectWithData:data
+                                                                                                 options:NSJSONReadingMutableContainers
+                                                                                                   error:&deserializerError];
+                                       if (deserializerError != nil)
+                                       {
+                                           [[[UIAlertView alloc] initWithTitle:@"JSON ERROR"
+                                                                       message:[deserializerError description]
+                                                                      delegate:nil
+                                                             cancelButtonTitle:@"OK"
+                                                             otherButtonTitles:nil] show];
+
+                                       }
+                                       else
+                                       {
+
+                                       }
+                                   }
+                               }];
     }
 }
 

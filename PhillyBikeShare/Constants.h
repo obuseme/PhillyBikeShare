@@ -6,4 +6,4 @@
 //  Copyright (c) 2015 Team Awesome. All rights reserved.
 //
 
-NSString * const BASE_URL = @"http://107.170.65.106:9999";
+static NSString *BASE_URL = @"http://107.170.65.106:9999";
