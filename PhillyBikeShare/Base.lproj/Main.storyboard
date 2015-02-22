@@ -1208,13 +1208,25 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TiO-pY-7Bj" id="78k-rV-aDR">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLh-qN-uxm">
-                                                    <rect key="frame" x="10" y="11" width="252" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frank S." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLh-qN-uxm">
+                                                    <rect key="frame" x="10" y="5" width="58.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.56470588235294117" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 3 Rider" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77y-D1-gTO">
+                                                    <rect key="frame" x="10" y="24.5" width="67" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.56470588239999997" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sLh-qN-uxm" firstAttribute="leading" secondItem="78k-rV-aDR" secondAttribute="leading" constant="10" id="2je-yX-iER"/>
+                                                <constraint firstItem="77y-D1-gTO" firstAttribute="top" secondItem="sLh-qN-uxm" secondAttribute="bottom" constant="-1" id="Afm-h7-7oR"/>
+                                                <constraint firstItem="sLh-qN-uxm" firstAttribute="top" secondItem="78k-rV-aDR" secondAttribute="top" constant="5" id="RJv-zx-fPV"/>
+                                                <constraint firstItem="77y-D1-gTO" firstAttribute="leading" secondItem="78k-rV-aDR" secondAttribute="leading" constant="10" id="wkg-fl-NrN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
