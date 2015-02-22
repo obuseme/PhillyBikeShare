@@ -45,6 +45,8 @@
 		4103F4931A9999FA00D679C9 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4911A9999FA00D679C9 /* search@2x.png */; };
 		4103F4961A999C0F00D679C9 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4941A999C0F00D679C9 /* hamburger.png */; };
 		4103F4971A999C0F00D679C9 /* hamburger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4951A999C0F00D679C9 /* hamburger@2x.png */; };
+		4103F49E1A99A71200D679C9 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F49C1A99A71200D679C9 /* cross.png */; };
+		4103F49F1A99A71200D679C9 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F49D1A99A71200D679C9 /* cross@2x.png */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -116,6 +118,8 @@
 		4103F4911A9999FA00D679C9 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		4103F4941A999C0F00D679C9 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
 		4103F4951A999C0F00D679C9 /* hamburger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger@2x.png"; sourceTree = "<group>"; };
+		4103F49C1A99A71200D679C9 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		4103F49D1A99A71200D679C9 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -266,6 +270,8 @@
 		F68051C71A98EE0400A0F10A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4103F49C1A99A71200D679C9 /* cross.png */,
+				4103F49D1A99A71200D679C9 /* cross@2x.png */,
 				4103F4941A999C0F00D679C9 /* hamburger.png */,
 				4103F4951A999C0F00D679C9 /* hamburger@2x.png */,
 				4103F4901A9999FA00D679C9 /* search.png */,
@@ -390,10 +396,12 @@
 				4103F4971A999C0F00D679C9 /* hamburger@2x.png in Resources */,
 				4103F4921A9999FA00D679C9 /* search.png in Resources */,
 				F6D306AE1A9922DA0015AA77 /* arrow.png in Resources */,
+				4103F49E1A99A71200D679C9 /* cross.png in Resources */,
 				23F319921A99596B00B62401 /* station icon@2x.png in Resources */,
 				23F319761A991C0F00B62401 /* Destination Icons@2x.png in Resources */,
 				23F319901A99596B00B62401 /* Racks-Icon@2x.png in Resources */,
 				23F3197A1A99222800B62401 /* logo-long.png in Resources */,
+				4103F49F1A99A71200D679C9 /* cross@2x.png in Resources */,
 				23F3197B1A99222800B62401 /* logo-long@2x.png in Resources */,
 				23F319301A98B1CF00B62401 /* Main.storyboard in Resources */,
 				23F319811A99274200B62401 /* Station Pop Up@3x.png in Resources */,

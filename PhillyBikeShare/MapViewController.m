@@ -43,6 +43,12 @@
 @property (nonatomic, weak) IBOutlet UIView *searchContainerView;
 @property (nonatomic, weak) IBOutlet UITextField *searchField;
 
+@property (nonatomic, weak) IBOutlet UIView *rideCompleteView;
+
+@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
+@property (nonatomic, weak) IBOutlet UILabel *paceLabel;
+
 @end
 
 @implementation MapViewController
@@ -55,6 +61,9 @@
 
     self.searchContainerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.searchContainerView.layer.borderWidth = 1.0f;
+    self.rideCompleteView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.rideCompleteView.layer.borderWidth = 1.0f;
+    
     UIImageView *imgSearch=[[UIImageView alloc] initWithFrame:CGRectMake(0, -10, 20, 20)];
     [imgSearch setImage:[UIImage imageNamed:@"search.png"]];
     [imgSearch setContentMode:UIViewContentModeScaleAspectFit];
@@ -211,17 +220,21 @@
          */
 
         self.startStopRideButton.backgroundColor = [UIColor colorWithHexString:@"0082CB"];
-        NSString *time = [NSString stringWithFormat:@"Time: %@",  [MathController stringifySecondCount:self.seconds usingLongFormat:NO]];
-        NSString *distance = [NSString stringWithFormat:@"Distance: %@", [MathController stringifyDistance:self.distance]];
-        NSString *pace = [NSString stringWithFormat:@"Pace: %@",  [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
-        NSString *message = [NSString stringWithFormat:@"%@\n%@\n%@", time, distance, pace];
+        self.timeLabel.text = [MathController stringifySecondCount:self.seconds usingLongFormat:NO];
+        self.distanceLabel.text = [MathController stringifyDistance:self.distance];
+        self.paceLabel.text = [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds];
 
-        [[[UIAlertView alloc] initWithTitle:@"Nice Ride!" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+        self.rideCompleteView.hidden = NO;
         self.trackingRide = NO;
         [self.startStopRideButton setTitle:@"START RIDE" forState:UIControlStateNormal];
         [self.ridePath removeAllCoordinates];
         self.ridePolyline.map = nil;
     }
+}
+
+- (IBAction)closeRideCompleteView:(id)sender
+{
+    self.rideCompleteView.hidden = YES;
 }
 
 #pragma mark - Tracking a Ride
