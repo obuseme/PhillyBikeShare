@@ -104,7 +104,8 @@
     
     //Artificially center camera on Philly for now
     [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:39.9543828 longitude:-75.1696943 zoom:13 bearing:0 viewingAngle:0]];
-    
+
+    [self retrieveRacks];
 }
 
 - (void)rackAPIComplete:(id)notification
