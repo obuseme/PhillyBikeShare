@@ -270,77 +270,6 @@
                                     <action selector="startStopRidePressed:" destination="PRy-OS-4cc" eventType="touchUpInside" id="Pch-qX-u16"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWM-Kq-Wkj" customClass="MapMarkerView">
-                                <rect key="frame" x="0.0" y="600" width="600" height="165"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EH-PV-83L">
-                                        <rect key="frame" x="92" y="15" width="10" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Bikes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-Vc-gFa">
-                                        <rect key="frame" x="39" y="37" width="116" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xji-Da-NP9">
-                                        <rect key="frame" x="477" y="15" width="20" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Spaces" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAJ-R7-1ux">
-                                        <rect key="frame" x="421" y="37" width="131" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3m-dg-c1e">
-                                        <rect key="frame" x="54" y="118" width="89" height="30"/>
-                                        <state key="normal" title="Directions To">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taM-s1-Jd0">
-                                        <rect key="frame" x="432" y="118" width="109" height="30"/>
-                                        <state key="normal" title="Directions From">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-nH-T1W">
-                                        <rect key="frame" x="17" y="83" width="566" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="mbR-Vc-gFa" firstAttribute="top" secondItem="4EH-PV-83L" secondAttribute="bottom" constant="1" id="15v-9V-h8H"/>
-                                    <constraint firstItem="mbR-Vc-gFa" firstAttribute="top" secondItem="eWM-Kq-Wkj" secondAttribute="top" constant="37" id="3cc-vV-2bV"/>
-                                    <constraint firstAttribute="bottom" secondItem="e3m-dg-c1e" secondAttribute="bottom" constant="17" id="4yf-do-ATS"/>
-                                    <constraint firstItem="Xji-Da-NP9" firstAttribute="centerX" secondItem="tAJ-R7-1ux" secondAttribute="centerX" id="9CV-RZ-r8t"/>
-                                    <constraint firstAttribute="height" constant="165" id="FHR-dU-ksy"/>
-                                    <constraint firstItem="mbR-Vc-gFa" firstAttribute="leading" secondItem="eWM-Kq-Wkj" secondAttribute="leading" constant="39" id="JUK-Zv-PFJ"/>
-                                    <constraint firstItem="mbR-Vc-gFa" firstAttribute="centerX" secondItem="4EH-PV-83L" secondAttribute="centerX" id="c3x-Qx-kaG"/>
-                                    <constraint firstItem="taM-s1-Jd0" firstAttribute="centerX" secondItem="tAJ-R7-1ux" secondAttribute="centerX" id="cBa-BH-lbe"/>
-                                    <constraint firstAttribute="trailing" secondItem="tnJ-nH-T1W" secondAttribute="trailing" constant="17" id="dXQ-kd-DLv"/>
-                                    <constraint firstItem="tAJ-R7-1ux" firstAttribute="top" secondItem="eWM-Kq-Wkj" secondAttribute="top" constant="37" id="dnZ-zk-P4r"/>
-                                    <constraint firstAttribute="bottom" secondItem="taM-s1-Jd0" secondAttribute="bottom" constant="17" id="eah-4r-kiF"/>
-                                    <constraint firstItem="tnJ-nH-T1W" firstAttribute="leading" secondItem="eWM-Kq-Wkj" secondAttribute="leading" constant="17" id="gig-w1-rFi"/>
-                                    <constraint firstAttribute="trailing" secondItem="tAJ-R7-1ux" secondAttribute="trailing" constant="48" id="ovL-N1-ioR"/>
-                                    <constraint firstItem="e3m-dg-c1e" firstAttribute="centerX" secondItem="mbR-Vc-gFa" secondAttribute="centerX" constant="1" id="qjw-q0-IDy"/>
-                                    <constraint firstItem="tnJ-nH-T1W" firstAttribute="top" secondItem="eWM-Kq-Wkj" secondAttribute="top" constant="83" id="xGN-jV-h2M"/>
-                                    <constraint firstItem="tAJ-R7-1ux" firstAttribute="top" secondItem="Xji-Da-NP9" secondAttribute="bottom" constant="1" id="yqr-RR-kWp"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="nameLabel" destination="tnJ-nH-T1W" id="erV-Zj-9Cq"/>
-                                    <outlet property="numberOfBikesLabel" destination="4EH-PV-83L" id="FZt-xA-N9f"/>
-                                    <outlet property="numberOfRacksLabel" destination="Xji-Da-NP9" id="s3h-W3-nev"/>
-                                </connections>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="station icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="dIu-oe-13i">
                                 <rect key="frame" x="90" y="70" width="20" height="20"/>
                                 <constraints>
@@ -380,29 +309,138 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHk-1Y-9t8" customClass="MapMarkerView">
+                                <rect key="frame" x="0.0" y="600" width="600" height="228"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p5-Nx-wTb">
+                                        <rect key="frame" x="209" y="47" width="42" height="50"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="41"/>
+                                        <color key="textColor" red="0.58823529409999997" green="0.83921568629999999" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bikes Available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnC-v4-QEc">
+                                        <rect key="frame" x="195" y="96" width="69" height="14"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Racks Available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SY-pr-sbj">
+                                        <rect key="frame" x="339" y="96" width="71" height="14"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpz-6a-fEV">
+                                        <rect key="frame" x="160" y="118" width="136" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50980392159999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="MCu-0h-jGY"/>
+                                            <constraint firstAttribute="width" constant="136" id="gF7-u1-W68"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <state key="normal" title="Directions To Here">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L9-p8-qzi">
+                                        <rect key="frame" x="304" y="118" width="136" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50980392159999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="136" id="b2d-cG-Uez"/>
+                                            <constraint firstAttribute="height" constant="30" id="vXy-kd-ycc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <state key="normal" title="Directions From Here">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSy-7O-GaI">
+                                        <rect key="frame" x="289" y="14" width="43" height="23"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-UZ-JGD">
+                                        <rect key="frame" x="160" y="156" width="280" height="39"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="MOc-9i-tha"/>
+                                            <constraint firstAttribute="height" constant="39" id="pmW-T6-I9j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
+                                        <state key="normal" title="Reserve a Bike with         ">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applepaylogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xbF-Rk-slf">
+                                        <rect key="frame" x="355" y="160" width="63" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="cYq-hz-Tcd"/>
+                                            <constraint firstAttribute="width" constant="63" id="elJ-Gi-cvd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCu-Zg-3w1">
+                                        <rect key="frame" x="362" y="53" width="25" height="50"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="41"/>
+                                        <color key="textColor" red="1" green="0.56470588239999997" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9p5-Nx-wTb" firstAttribute="top" secondItem="rSy-7O-GaI" secondAttribute="bottom" constant="10" id="5MR-tP-ykm"/>
+                                    <constraint firstItem="2SY-pr-sbj" firstAttribute="centerX" secondItem="2L9-p8-qzi" secondAttribute="centerX" constant="2.5" id="71V-X0-dmW"/>
+                                    <constraint firstAttribute="centerX" secondItem="y9P-UZ-JGD" secondAttribute="centerX" id="91p-OA-Zdn"/>
+                                    <constraint firstItem="2SY-pr-sbj" firstAttribute="centerX" secondItem="lCu-Zg-3w1" secondAttribute="centerX" id="BbV-58-oyu"/>
+                                    <constraint firstItem="2SY-pr-sbj" firstAttribute="top" secondItem="lCu-Zg-3w1" secondAttribute="bottom" constant="-7" id="Br9-j0-DDc"/>
+                                    <constraint firstItem="2L9-p8-qzi" firstAttribute="top" secondItem="2SY-pr-sbj" secondAttribute="bottom" constant="8" id="CsY-xp-iWc"/>
+                                    <constraint firstItem="y9P-UZ-JGD" firstAttribute="trailing" secondItem="xbF-Rk-slf" secondAttribute="trailing" constant="22" id="D21-6a-1Wr"/>
+                                    <constraint firstAttribute="centerX" secondItem="rSy-7O-GaI" secondAttribute="centerX" constant="-10" id="EBp-Q2-G91"/>
+                                    <constraint firstAttribute="bottom" secondItem="y9P-UZ-JGD" secondAttribute="bottom" constant="33" id="IHE-bb-ahf"/>
+                                    <constraint firstItem="hnC-v4-QEc" firstAttribute="top" secondItem="9p5-Nx-wTb" secondAttribute="bottom" constant="-1" id="Ihj-Sx-elK"/>
+                                    <constraint firstItem="2SY-pr-sbj" firstAttribute="top" secondItem="lCu-Zg-3w1" secondAttribute="bottom" constant="-7" id="KVe-r4-Vpc"/>
+                                    <constraint firstItem="Fpz-6a-fEV" firstAttribute="leading" secondItem="y9P-UZ-JGD" secondAttribute="leading" id="Nph-H9-wwa"/>
+                                    <constraint firstItem="y9P-UZ-JGD" firstAttribute="top" secondItem="Fpz-6a-fEV" secondAttribute="bottom" constant="8" id="Om0-zt-Ni1"/>
+                                    <constraint firstItem="y9P-UZ-JGD" firstAttribute="top" secondItem="2L9-p8-qzi" secondAttribute="bottom" constant="8" id="Y0e-8L-ihN"/>
+                                    <constraint firstAttribute="height" constant="228" id="dK7-Nn-r1N"/>
+                                    <constraint firstItem="Fpz-6a-fEV" firstAttribute="centerX" secondItem="hnC-v4-QEc" secondAttribute="centerX" constant="-1.5" id="fwC-1N-iXo"/>
+                                    <constraint firstItem="9p5-Nx-wTb" firstAttribute="centerX" secondItem="hnC-v4-QEc" secondAttribute="centerX" id="hHp-nm-2o4"/>
+                                    <constraint firstItem="Fpz-6a-fEV" firstAttribute="top" secondItem="hnC-v4-QEc" secondAttribute="bottom" constant="8" id="nc1-eO-rha"/>
+                                    <constraint firstItem="2L9-p8-qzi" firstAttribute="trailing" secondItem="y9P-UZ-JGD" secondAttribute="trailing" id="rcf-aW-GQw"/>
+                                    <constraint firstItem="y9P-UZ-JGD" firstAttribute="centerY" secondItem="xbF-Rk-slf" secondAttribute="centerY" constant="1.5" id="sCw-nw-O3e"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="rSy-7O-GaI" id="RGY-xb-hnv"/>
+                                    <outlet property="numberOfBikesLabel" destination="9p5-Nx-wTb" id="44K-qs-JjM"/>
+                                    <outlet property="numberOfRacksLabel" destination="lCu-Zg-3w1" id="W6c-Bj-A20"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rql-Lb-ZjQ" firstAttribute="leading" secondItem="Ucw-CU-SvB" secondAttribute="trailing" id="0ZK-u5-tKl"/>
+                            <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="uHk-1Y-9t8" secondAttribute="bottom" constant="-228" id="15U-9D-pP8"/>
                             <constraint firstItem="jTv-DM-HgU" firstAttribute="centerX" secondItem="kTF-fc-4Nm" secondAttribute="centerX" id="1tg-or-iGj"/>
                             <constraint firstItem="Wr0-ek-Y3E" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="29t-tV-etm"/>
                             <constraint firstAttribute="bottom" secondItem="Wr0-ek-Y3E" secondAttribute="bottom" id="2I7-Gf-qcA"/>
                             <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="2Y0-aj-3sG" secondAttribute="bottom" constant="20" id="3xP-Ph-M5a"/>
                             <constraint firstItem="rql-Lb-ZjQ" firstAttribute="top" secondItem="deO-ox-7cz" secondAttribute="bottom" constant="-28" id="61A-ow-Y7Y"/>
-                            <constraint firstItem="eWM-Kq-Wkj" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="AXz-qr-kar"/>
                             <constraint firstItem="Ucw-CU-SvB" firstAttribute="width" secondItem="rql-Lb-ZjQ" secondAttribute="width" id="CDy-b1-pS1"/>
                             <constraint firstAttribute="trailing" secondItem="rql-Lb-ZjQ" secondAttribute="trailing" id="CW4-bG-Vfe"/>
-                            <constraint firstAttribute="trailing" secondItem="eWM-Kq-Wkj" secondAttribute="trailing" id="DCQ-3j-rWd"/>
+                            <constraint firstItem="uHk-1Y-9t8" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="D1q-5f-Rz1"/>
                             <constraint firstItem="Ucw-CU-SvB" firstAttribute="top" secondItem="kTF-fc-4Nm" secondAttribute="bottom" constant="-30" id="EE9-iX-7TA"/>
                             <constraint firstItem="deO-ox-7cz" firstAttribute="centerX" secondItem="rql-Lb-ZjQ" secondAttribute="centerX" constant="0.5" id="Erk-4L-kAV"/>
                             <constraint firstItem="k34-4I-z7s" firstAttribute="leading" secondItem="Kk4-mx-ZAJ" secondAttribute="leading" id="GQu-6Q-gpA"/>
                             <constraint firstAttribute="trailing" secondItem="Wr0-ek-Y3E" secondAttribute="trailing" id="Jhj-Or-Mbc"/>
+                            <constraint firstAttribute="trailing" secondItem="uHk-1Y-9t8" secondAttribute="trailing" id="Mtn-Z7-ciA"/>
                             <constraint firstItem="k34-4I-z7s" firstAttribute="top" secondItem="dIu-oe-13i" secondAttribute="bottom" constant="-26" id="OEw-Py-kqm"/>
                             <constraint firstItem="k34-4I-z7s" firstAttribute="top" secondItem="ARV-eh-UjA" secondAttribute="bottom" id="QMa-AI-PkN"/>
                             <constraint firstItem="jTv-DM-HgU" firstAttribute="top" secondItem="kTF-fc-4Nm" secondAttribute="bottom" constant="-3" id="U5N-gm-IMZ"/>
                             <constraint firstItem="D5o-A8-E9J" firstAttribute="top" secondItem="deO-ox-7cz" secondAttribute="bottom" constant="-1" id="UcX-RP-58c"/>
                             <constraint firstItem="Ucw-CU-SvB" firstAttribute="leading" secondItem="k34-4I-z7s" secondAttribute="trailing" id="Ulb-fP-pVg"/>
-                            <constraint firstItem="WEf-lQ-gJn" firstAttribute="top" secondItem="eWM-Kq-Wkj" secondAttribute="bottom" constant="-165" id="Xwz-FU-KXL"/>
                             <constraint firstAttribute="centerX" secondItem="2Y0-aj-3sG" secondAttribute="centerX" id="ZdP-4n-REO"/>
                             <constraint firstItem="6d9-ZA-4T3" firstAttribute="top" secondItem="dIu-oe-13i" secondAttribute="bottom" constant="1" id="eSU-2o-3ey"/>
                             <constraint firstItem="dIu-oe-13i" firstAttribute="centerX" secondItem="6d9-ZA-4T3" secondAttribute="centerX" constant="0.5" id="hOP-k4-wHK"/>
@@ -418,8 +456,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="bikesButton" destination="Ucw-CU-SvB" id="Ui8-iG-11S"/>
-                        <outlet property="mapMarkerView" destination="eWM-Kq-Wkj" id="OqD-q5-JPy"/>
-                        <outlet property="mapMarkerViewConstraint" destination="Xwz-FU-KXL" id="Ft7-4w-Dzg"/>
+                        <outlet property="mapMarkerView" destination="uHk-1Y-9t8" id="DBe-8i-Ew0"/>
+                        <outlet property="mapMarkerViewConstraint" destination="15U-9D-pP8" id="66M-M8-npP"/>
                         <outlet property="mapView" destination="Wr0-ek-Y3E" id="Twj-c8-fGV"/>
                         <outlet property="racksButton" destination="rql-Lb-ZjQ" id="BYw-Z2-cqF"/>
                         <outlet property="startStopRideButton" destination="2Y0-aj-3sG" id="o4S-bb-wKe"/>
@@ -509,6 +547,7 @@
     <resources>
         <image name="Racks-Icon.png" width="33" height="32"/>
         <image name="Sign In_image.png" width="640" height="1136"/>
+        <image name="applepaylogo.png" width="500" height="209"/>
         <image name="arrow.png" width="34" height="30"/>
         <image name="bikeicon.png" width="43" height="32"/>
         <image name="station icon.png" width="29" height="31"/>

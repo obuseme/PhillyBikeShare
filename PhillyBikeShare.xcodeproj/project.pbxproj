@@ -38,6 +38,7 @@
 		23F319941A99596B00B62401 /* bikeicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F3198E1A99596B00B62401 /* bikeicon@2x.png */; };
 		23F319951A99596B00B62401 /* bikeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F3198F1A99596B00B62401 /* bikeicon.png */; };
 		23F319971A996A0700B62401 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F319961A996A0700B62401 /* UIColor+HexColors.m */; };
+		23F3199A1A9979A400B62401 /* applepaylogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 23F319991A9979A400B62401 /* applepaylogo.png */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -99,6 +100,7 @@
 		23F3198F1A99596B00B62401 /* bikeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bikeicon.png; sourceTree = "<group>"; };
 		23F319961A996A0700B62401 /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColors.m"; sourceTree = "<group>"; };
 		23F319981A996A1200B62401 /* UIColor+HexColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColors.h"; sourceTree = "<group>"; };
+		23F319991A9979A400B62401 /* applepaylogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applepaylogo.png; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		F68051C71A98EE0400A0F10A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				23F319991A9979A400B62401 /* applepaylogo.png */,
 				23F3198A1A99596B00B62401 /* Racks-Icon@2x.png */,
 				23F3198B1A99596B00B62401 /* Racks-Icon.png */,
 				23F3198C1A99596B00B62401 /* station icon@2x.png */,
@@ -371,6 +374,7 @@
 				23F319731A991C0F00B62401 /* Icon Rack.png in Resources */,
 				23F3197F1A99274200B62401 /* Station Pop Up@2x.png in Resources */,
 				23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */,
+				23F3199A1A9979A400B62401 /* applepaylogo.png in Resources */,
 				23F319931A99596B00B62401 /* station icon.png in Resources */,
 				23F319711A991C0F00B62401 /* Icon Bikes@2x.png in Resources */,
 				23F319771A991C0F00B62401 /* Icon Stations.png in Resources */,

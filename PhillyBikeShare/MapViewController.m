@@ -259,7 +259,7 @@
 
 - (void)hideMapMarkerView
 {
-    self.mapMarkerViewConstraint.constant = -165;
+    self.mapMarkerViewConstraint.constant = -228;
     [UIView animateWithDuration:0.1 animations:^{
         [self.view layoutIfNeeded];
     }];
