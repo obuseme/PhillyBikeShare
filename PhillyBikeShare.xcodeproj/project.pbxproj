@@ -47,6 +47,8 @@
 		4103F4971A999C0F00D679C9 /* hamburger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4951A999C0F00D679C9 /* hamburger@2x.png */; };
 		4103F49E1A99A71200D679C9 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F49C1A99A71200D679C9 /* cross.png */; };
 		4103F49F1A99A71200D679C9 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F49D1A99A71200D679C9 /* cross@2x.png */; };
+		4103F4A11A9A071A00D679C9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4103F4A01A9A071A00D679C9 /* HealthKit.framework */; };
+		4103F4A51A9A07A100D679C9 /* AccountSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4103F4A41A9A07A100D679C9 /* AccountSettingsTableViewController.m */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -120,6 +122,10 @@
 		4103F4951A999C0F00D679C9 /* hamburger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger@2x.png"; sourceTree = "<group>"; };
 		4103F49C1A99A71200D679C9 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		4103F49D1A99A71200D679C9 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		4103F4A01A9A071A00D679C9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		4103F4A21A9A071A00D679C9 /* PhillyBikeShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PhillyBikeShare.entitlements; sourceTree = "<group>"; };
+		4103F4A31A9A07A100D679C9 /* AccountSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSettingsTableViewController.h; sourceTree = "<group>"; };
+		4103F4A41A9A07A100D679C9 /* AccountSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsTableViewController.m; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8294DBB97A4CBB9F7F36C2 /* libPods.a in Frameworks */,
+				4103F4A11A9A071A00D679C9 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,9 +182,12 @@
 		23F3191D1A98B1CF00B62401 /* PhillyBikeShare */ = {
 			isa = PBXGroup;
 			children = (
+				4103F4A21A9A071A00D679C9 /* PhillyBikeShare.entitlements */,
 				93999F0B1A98EBFC00BBC1F1 /* Models */,
 				F68051C71A98EE0400A0F10A /* Images */,
 				93999F041A98E87400BBC1F1 /* API Stuff */,
+				4103F4A31A9A07A100D679C9 /* AccountSettingsTableViewController.h */,
+				4103F4A41A9A07A100D679C9 /* AccountSettingsTableViewController.m */,
 				23F319221A98B1CF00B62401 /* AppDelegate.h */,
 				23F319231A98B1CF00B62401 /* AppDelegate.m */,
 				23F3194A1A98B30600B62401 /* LoginViewController.h */,
@@ -232,6 +242,7 @@
 		5A785EEBB1CE46D69AFE0827 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4103F4A01A9A071A00D679C9 /* HealthKit.framework */,
 				CC2924723BAC4180B304108E /* libPods.a */,
 			);
 			name = Frameworks;
@@ -358,6 +369,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
 						};
 					};
 					23F319391A98B1CF00B62401 = {
@@ -476,6 +490,7 @@
 				23F3199E1A997E0D00B62401 /* User.m in Sources */,
 				93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */,
 				23F319971A996A0700B62401 /* UIColor+HexColors.m in Sources */,
+				4103F4A51A9A07A100D679C9 /* AccountSettingsTableViewController.m in Sources */,
 				23F3194C1A98B30600B62401 /* LoginViewController.m in Sources */,
 				23F319241A98B1CF00B62401 /* AppDelegate.m in Sources */,
 				93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */,
@@ -610,6 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PhillyBikeShare/PhillyBikeShare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhillyBikeShare/Info.plist;
@@ -628,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PhillyBikeShare/PhillyBikeShare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PhillyBikeShare/Info.plist;

@@ -19,6 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSString *googleMapsAPIKey = @"AIzaSyDYVB9rGI9nI_FgnLRWcjBr_hefr3KaDTk";
     [GMSServices provideAPIKey:googleMapsAPIKey];
+
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSFontAttributeName: [UIFont fontWithName:@"Apple SD Gothic Neo" size:20.0f]
+                                                            }];
     return YES;
 }
 

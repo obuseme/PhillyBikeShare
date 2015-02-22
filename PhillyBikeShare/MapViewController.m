@@ -9,12 +9,17 @@
 #import "MapViewController.h"
 #import "MathController.h"
 #import "MapMarkerView.h"
-#import "Rack.h"
 #import "AppDelegate.h"
+
 #import "UIColor+HexColors.h"
-#import <QuartzCore/QuartzCore.h>
+
 #import "Constants.h"
+
+#import "Rack.h"
 #import "User.h"
+
+#import <QuartzCore/QuartzCore.h>
+#import <HealthKit/HealthKit.h>
 
 @interface MapViewController ()
 
@@ -278,6 +283,32 @@
                                        }
                                    }
                                }];
+
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HK"])
+        {
+            //Save to HealthKit
+            HKHealthStore *healthStore = [[HKHealthStore alloc] init];
+            HKQuantityType  *hkQuantityType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceCycling];
+            HKQuantity *hkQuantity = [HKQuantity quantityWithUnit:[HKUnit meterUnit] doubleValue:2000];
+
+            HKQuantitySample *cycleDistanceSample = [HKQuantitySample quantitySampleWithType:hkQuantityType
+                                                                                    quantity:hkQuantity
+                                                                                   startDate:self.startDate
+                                                                                     endDate:self.startDate];
+
+            HKQuantityType  *hkQuantityTypeCalories = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
+            HKQuantity *hkQuantityCalories = [HKQuantity quantityWithUnit:[HKUnit calorieUnit] doubleValue:500];
+
+            HKQuantitySample *calorieSample = [HKQuantitySample quantitySampleWithType:hkQuantityTypeCalories
+                                                                              quantity:hkQuantityCalories
+                                                                             startDate:self.startDate
+                                                                               endDate:self.startDate];
+
+            [healthStore saveObjects:@[cycleDistanceSample, calorieSample] withCompletion:^(BOOL success, NSError *error) {
+                if (error)
+                    NSLog(@"error saving to healthkit %@", error);
+            }];
+        }
     }
 }
 
