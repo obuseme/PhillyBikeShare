@@ -1,0 +1,13 @@
+PODS:
+  - ECSlidingViewController (2.0.3)
+  - Google-Maps-iOS-SDK (1.9.2)
+
+DEPENDENCIES:
+  - ECSlidingViewController
+  - Google-Maps-iOS-SDK
+
+SPEC CHECKSUMS:
+  ECSlidingViewController: e79fe856bfb1a99a39c995377a1943e50f7647eb
+  Google-Maps-iOS-SDK: 3b89f4c151f8fc3ddb0e70dece9bcab33dbec2ea
+
+COCOAPODS: 0.34.2
