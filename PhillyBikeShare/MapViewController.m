@@ -326,6 +326,36 @@
     self.rideCompleteView.hidden = YES;
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    if ([textField.text length] > 0)
+    {
+        CLLocationCoordinate2D centerOfCenterCity = CLLocationCoordinate2DMake(39.9523548, -75.1636405);
+        CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:centerOfCenterCity radius:10000 identifier:@"somethingNotNil"];
+        [geocoder geocodeAddressString:textField.text
+                              inRegion:region
+                     completionHandler:^(NSArray *placemarks, NSError *error) {
+            if (error || [placemarks count] == 0)
+            {
+                [[[UIAlertView alloc] initWithTitle:@"Sorry" message:@"We were unable to find that location.  Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            }
+            else
+            {
+                CLPlacemark *placemark = placemarks[0];
+
+                self.centerOnUser = NO;
+                [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:placemark.location.coordinate.latitude longitude:placemark.location.coordinate.longitude zoom:13 bearing:0 viewingAngle:0]];
+            }
+        }];
+    }
+
+    return YES;
+}
+
 #pragma mark - Tracking a Ride
 
 - (void)eachSecond

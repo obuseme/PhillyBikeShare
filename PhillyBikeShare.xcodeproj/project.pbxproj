@@ -219,10 +219,6 @@
 				23F319511A98D9F900B62401 /* MathController.m */,
 				4103F4A61A9A10F100D679C9 /* MyStatsViewController.h */,
 				4103F4A71A9A10F100D679C9 /* MyStatsViewController.m */,
-				23F3192E1A98B1CF00B62401 /* Main.storyboard */,
-				23F319311A98B1CF00B62401 /* Images.xcassets */,
-				23F319331A98B1CF00B62401 /* LaunchScreen.xib */,
-				23F319251A98B1CF00B62401 /* PhillyBikeShare.xcdatamodeld */,
 				23F3191E1A98B1CF00B62401 /* Supporting Files */,
 				23F319981A996A1200B62401 /* UIColor+HexColors.h */,
 				23F319961A996A0700B62401 /* UIColor+HexColors.m */,
@@ -233,6 +229,10 @@
 				4103F4AA1A9A174300D679C9 /* LeaderboardTableViewController.m */,
 				4103F4AC1A9A1DB600D679C9 /* RouteViewController.h */,
 				4103F4AD1A9A1DB600D679C9 /* RouteViewController.m */,
+				23F3192E1A98B1CF00B62401 /* Main.storyboard */,
+				23F319311A98B1CF00B62401 /* Images.xcassets */,
+				23F319331A98B1CF00B62401 /* LaunchScreen.xib */,
+				23F319251A98B1CF00B62401 /* PhillyBikeShare.xcdatamodeld */,
 			);
 			path = PhillyBikeShare;
 			sourceTree = "<group>";
