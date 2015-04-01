@@ -7,7 +7,7 @@ DEPENDENCIES:
   - Google-Maps-iOS-SDK
 
 SPEC CHECKSUMS:
-  ECSlidingViewController: e79fe856bfb1a99a39c995377a1943e50f7647eb
-  Google-Maps-iOS-SDK: 3b89f4c151f8fc3ddb0e70dece9bcab33dbec2ea
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
+  Google-Maps-iOS-SDK: 4c008abdb68e03ae125c7f674be841d369e2b3de
 
 COCOAPODS: 0.34.2

@@ -13,7 +13,6 @@
 		23F319301A98B1CF00B62401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F3192E1A98B1CF00B62401 /* Main.storyboard */; };
 		23F319321A98B1CF00B62401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F319311A98B1CF00B62401 /* Images.xcassets */; };
 		23F319351A98B1CF00B62401 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F319331A98B1CF00B62401 /* LaunchScreen.xib */; };
-		23F319411A98B1CF00B62401 /* PhillyBikeShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F319401A98B1CF00B62401 /* PhillyBikeShareTests.m */; };
 		23F3194C1A98B30600B62401 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3194B1A98B30600B62401 /* LoginViewController.m */; };
 		23F3194F1A98B55800B62401 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3194E1A98B55800B62401 /* MapViewController.m */; };
 		23F319521A98D9F900B62401 /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F319511A98D9F900B62401 /* MathController.m */; };
@@ -57,6 +56,7 @@
 		4103F4B81A9A24DF00D679C9 /* Navigation 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4103F4B71A9A24DF00D679C9 /* Navigation 2.png */; };
 		412024B21A9A3CB400FF37B0 /* Leaderboard 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 412024B01A9A3CB400FF37B0 /* Leaderboard 2.png */; };
 		412024B31A9A3CB400FF37B0 /* Leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 412024B11A9A3CB400FF37B0 /* Leaderboard.png */; };
+		41FD7C4A1ACB779C00BB7080 /* MapViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FD7C491ACB779C00BB7080 /* MapViewControllerTests.m */; };
 		93999F071A98E88900BBC1F1 /* RackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F061A98E88900BBC1F1 /* RackAPI.swift */; };
 		93999F0E1A98EC3500BBC1F1 /* Rack.m in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0D1A98EC3500BBC1F1 /* Rack.m */; };
 		93999F101A98F06D00BBC1F1 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93999F0F1A98F06D00BBC1F1 /* Structs.swift */; };
@@ -88,7 +88,6 @@
 		23F319341A98B1CF00B62401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		23F3193A1A98B1CF00B62401 /* PhillyBikeShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhillyBikeShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F3193F1A98B1CF00B62401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23F319401A98B1CF00B62401 /* PhillyBikeShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhillyBikeShareTests.m; sourceTree = "<group>"; };
 		23F3194A1A98B30600B62401 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		23F3194B1A98B30600B62401 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		23F3194D1A98B55800B62401 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		4103F4B71A9A24DF00D679C9 /* Navigation 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Navigation 2.png"; sourceTree = "<group>"; };
 		412024B01A9A3CB400FF37B0 /* Leaderboard 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leaderboard 2.png"; sourceTree = "<group>"; };
 		412024B11A9A3CB400FF37B0 /* Leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Leaderboard.png; sourceTree = "<group>"; };
+		41FD7C491ACB779C00BB7080 /* MapViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewControllerTests.m; sourceTree = "<group>"; };
 		84FE4991FBD9AF11A104FBE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B9030727C17CD3060B103EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		93999F051A98E88800BBC1F1 /* PhillyBikeShare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhillyBikeShare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -250,8 +250,8 @@
 		23F3193D1A98B1CF00B62401 /* PhillyBikeShareTests */ = {
 			isa = PBXGroup;
 			children = (
-				23F319401A98B1CF00B62401 /* PhillyBikeShareTests.m */,
 				23F3193E1A98B1CF00B62401 /* Supporting Files */,
+				41FD7C491ACB779C00BB7080 /* MapViewControllerTests.m */,
 			);
 			path = PhillyBikeShareTests;
 			sourceTree = "<group>";
@@ -547,7 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F319411A98B1CF00B62401 /* PhillyBikeShareTests.m in Sources */,
+				41FD7C4A1ACB779C00BB7080 /* MapViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
