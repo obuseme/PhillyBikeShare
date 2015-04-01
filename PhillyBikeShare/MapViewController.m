@@ -335,7 +335,7 @@
     if ([textField.text length] > 0)
     {
         CLLocationCoordinate2D centerOfCenterCity = CLLocationCoordinate2DMake(39.9523548, -75.1636405);
-        CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:centerOfCenterCity radius:10000 identifier:@"somethingNotNil"];
+        CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:centerOfCenterCity radius:11000 identifier:@"somethingNotNil"];
         [geocoder geocodeAddressString:textField.text
                               inRegion:region
                      completionHandler:^(NSArray *placemarks, NSError *error) {
