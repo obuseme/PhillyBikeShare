@@ -72,11 +72,13 @@
     self.searchContainerView.layer.borderWidth = 1.0f;
     self.rideCompleteView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.rideCompleteView.layer.borderWidth = 1.0f;
-    
-    UIImageView *imgSearch=[[UIImageView alloc] initWithFrame:CGRectMake(0, -10, 20, 20)];
+
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 28, 20)];
+    UIImageView *imgSearch=[[UIImageView alloc] initWithFrame:CGRectMake(0, -2, 20, 20)];
     [imgSearch setImage:[UIImage imageNamed:@"search.png"]];
     [imgSearch setContentMode:UIViewContentModeScaleAspectFit];
-    self.searchField.leftView=imgSearch;
+    [leftView addSubview:imgSearch];
+    self.searchField.leftView=leftView;
     self.searchField.leftViewMode=UITextFieldViewModeAlways;
 
     [self toggleStations:nil];
