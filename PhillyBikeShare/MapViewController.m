@@ -348,7 +348,7 @@
                 CLPlacemark *placemark = placemarks[0];
 
                 self.centerOnUser = NO;
-                [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:placemark.location.coordinate.latitude longitude:placemark.location.coordinate.longitude zoom:13 bearing:0 viewingAngle:0]];
+                [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:placemark.location.coordinate.latitude longitude:placemark.location.coordinate.longitude zoom:15 bearing:0 viewingAngle:0]];
             }
         }];
     }
@@ -421,7 +421,7 @@
     CLLocation *location = locations[0];
     if (self.centerOnUser)
     {
-        [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:13 bearing:0 viewingAngle:0]];
+        [self.mapView setCamera:[GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:15 bearing:0 viewingAngle:0]];
     }
     if (self.trackingRide)
     {
